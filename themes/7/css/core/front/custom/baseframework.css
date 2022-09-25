@@ -1,0 +1,2678 @@
+/*==============================================================\
+|																|
+|	(C) 2017	Taman. taman.sherzad@gmail.com					|
+|				https://invisionpower.com/profile/537452-taman	|
+|				Base Framework Styles. 							|
+|																|
+/*=============================================================*/
+
+
+/* IPS & Third-Party APPS.
+/==========================*/
+/*====\\IPS Apps//====>*/
+html[dir="ltr"] .cPastLeaders_title span {padding: 0 5px;}
+html[dir="rtl"] .cPastLeaders_title span {padding: 0 5px;}
+.cPastLeaders_title span{
+	border-radius: 3px;
+}
+.cPastLeaders_cell.cPastLeaders_cellEmpty{
+	opacity: 0;
+}
+.cPastLeaders_title:before{
+    height: 3px;
+	border: none;
+}
+.cPastLeaders_cell:after{
+	opacity: 0.5;
+}
+.cBlogInfo_content:after{
+	background: {hextorgb="area_background_reset" opacity="0.10"};
+}
+.cBlogList.ipsDataList > .ipsDataItem {
+	margin: 10px;
+}
+#elMyClubsActivity .ipsStreamItem.ipsStreamItem_contentBlock:last-child{
+	padding-left: 7px;
+	padding-top: 7px;
+	padding-right: 7px;
+	padding-bottom: 7px;
+}
+#elMyClubsActivity .ipsStreamItem.ipsStreamItem_contentBlock{
+	padding: 15px;
+}
+#elDownloadsSubmit .ipsAttachment_dropZone{
+  	border: 3px dashed {hextorgb="primary_button" opacity="0.40"};
+}
+.ipsWidget.ipsWidget_horizontal[data-blockid^="app_cms"]{
+	padding: 10px !important;
+}
+.cGalleryPatchwork_item .ipsPhotoPanel,
+.cGalleryCat > a:before{
+    background: rgba(0,0,0, 0.35);
+}
+.cGallerySubmit_uploadImages .ipsAttachment_dropZone:not( .ipsDragging ),
+#elGallerySubmit_imageUploader .ipsAttachment_fileList .ipsImageAttach{
+    border-color: {hextorgb="progressbar_bg" opacity="0.40"};
+}
+#elGallerySubmit_imageUploader .ipsAttachment_fileList .ipsImageAttach {
+	background-color: {theme="area_background_dark"};
+}
+.cGalleryAlbumSlider li.cGalleryAlbumSlider_active,
+.cGallerySubmit_strip .cGallerySubmit_current .cGalleryTrimmedImage {
+    border-color: {theme="tabs_activebutton"};
+}
+html[dir="ltr"] .cGallerySubmit_strip .cGallerySubmit_current:after {
+	border-color: transparent transparent transparent {theme="tabs_activebutton"};
+}
+html[dir="rtl"] .cGallerySubmit_strip .cGallerySubmit_current:after {
+	border-color: transparent {theme="tabs_activebutton"} transparent transparent;
+}
+.cGalleryChooseAlbum_listItem {
+	background: linear-gradient(to bottom, {hextorgb="widget_bg" opacity="0.65"} 0%,{hextorgb="widget_bg" opacity="1"} 100%);
+	border: 1px solid {theme="widget_borders"};
+}
+.cGalleryChooseAlbum_listItem:not([data-disabled]):after {
+	color: {theme="ipstype_sectionhead"};
+}
+.cGalleryChooseAlbum_listItem:not([data-disabled]):hover {
+	border-color: {hextorgb="tabs_activebutton" opacity="0.8"};
+}
+.cGallerySubmit_done:before{
+	border: none;
+}
+.cGalleryAlbumSlider li.cGalleryAlbumSlider_active{
+	border-width: 1px;
+}
+.cGallerySubmit_strip .cGalleryTrimmedImage{
+	border-width: 3px;
+}
+.cGalleryLightbox_info {
+  	background: {theme="area_background"};
+}
+.elGalleryImage .ipsButton.ipsButton_link {
+	border: none !important;
+}
+.elGalleryImage .ipsFollow.ipsButton.ipsButton_link  {
+	background: {theme="light_button"} !important;
+	color: {theme="light_button_font"} !important;
+}
+.cGallerySteps > li.cGallerySteps_done span,
+.cGallerySteps > li.cGallerySteps_active span,
+.cGallerySteps > li.cGallerySteps_done a,
+.cGallerySteps > li.cGallerySteps_active a,
+.ipsApp button.cGallerySubmit_button,
+.cGalleryNote_editing .cGalleryNote_note textarea,
+#elGalleryImageNav a,
+#elEventHeader_details {
+    color: inherit;
+}
+#elBlogHeaderStats{
+	color: {hextorgb="ipstype_minorheading" opacity="0.7"};
+}
+.cAnnouncementsFloat {
+    left: 0;
+    right: 0;
+}
+/* News Ticker.
+/==========================*/
+{{if theme.nt_toggle}}
+.ta_themeNT,
+.ta_themeNT .newsTicker,
+.ta_themeNT #ta_webticker > li {
+    position: relative;
+}
+.ta_themeNT .ta_tickerTitle,
+.ta_themeNT .ta_tickerTitle:before,
+.ta_themeNT .ta_tickerTitle:after,
+.ta_themeNT #ta_webticker > li:before{
+  position: absolute;
+}
+.ta_themeNT{
+	width: 100%;
+	margin: 0 auto;
+	direction: ltr;
+}
+.ta_themeNT,
+.ta_themeNT .newsTicker,
+.ta_themeNT #ta_webticker {
+    height: 40px;
+}
+.ta_themeNT .ta_tickerTitle,
+.ta_themeNT #ta_webticker {
+    line-height: 40px;
+}
+.ta_themeNT #ta_webticker{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ta_themeNT #ta_webticker>li{
+  display: inline-block;
+}
+.ta_themeNT #ta_webticker{
+  display: none;
+}
+.ta_themeNT .mask #ta_webticker{
+  display: block;
+}
+.ta_themeNT .newsTicker,
+.ta_themeNT .ta_tickerTitle {
+    z-index: 1;
+}
+/*====\\Title//====>*/
+.ta_themeNT .ta_tickerTitle{
+  top: 0;
+	left: 0;
+  bottom: 0;
+}
+.ta_themeNT .ta_tickerTitle>span {
+    padding: 0 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.ta_themeNT .ta_tickerTitle i {
+    padding-right: 5px;
+}
+.ta_themeNT .ta_tickerTitle:after{
+    content: "";
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    -webkit-box-shadow: 5px 0px 7px -2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 5px 0px 7px -2px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 0px 7px -2px rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+.ta_themeNT .ta_tickerTitle:after{
+    right: -10px;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    transform: skew(20deg);
+}
+/*<Ticker icons>*/
+.ta_themeNT #ta_webticker > li:before{
+    content: "\f111";
+  	top: 0;
+    right: -15px;
+    vertical-align: middle;
+    font-size: 6px;
+    display: inline-block;
+    font-family: FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.ta_themeNT #ta_webticker > .webticker-init::before,
+.ta_themeNT #ta_webticker > .ticker-spacer::before{
+  display: none;
+}
+.ta_themeNT #ta_webticker > li{
+  margin-right: 25px;
+	font-size: 12px;
+}
+.ta_themeNT #ta_webticker > li .ipsBadge.ipsBadge_icon{
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 11px;
+    border-radius: 22px;
+}
+/*Colors*/
+.ta_themeNT .ta_tickerTitle,
+.ta_themeNT .ta_tickerTitle:after {
+    background-color: {theme="nt_title_bg"};
+}
+.ta_themeNT {
+    border-right: 3px solid {theme="nt_title_bg"};
+}
+.ta_themeNT .ta_tickerTitle>span {
+    color: {theme="nt_title_color"};
+}
+.ta_themeNT .newsTicker {
+    background-color: {theme="nt_background"};
+}
+.ta_themeNT #ta_webticker > li,
+.ta_themeNT #ta_webticker > li > a,
+.ta_themeNT #ta_webticker > li:before{
+	color: {theme="nt_fontcolor"};
+}
+.ta_themeNT #ta_webticker > li > a:hover{
+	color: {theme="link_hover"};
+}
+{{endif}}
+/* Footer.
+/==========================*/
+{{if theme.footer_toggle}}
+.footer-wrap,
+.ta-Footer{
+	position: relative;
+}
+.ta-Footer {
+    background: {theme="footer_background"};
+}
+.ta-Footer:before {
+	content: "";
+  	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	right: 0;
+	left: 0;
+  	width: 100%;
+   {{if theme.footer_bgimage}}
+  		background-image: url({theme="footer_bgimage"});
+  		background-repeat: no-repeat;
+		background-size: cover;
+  		background-position: 0 50%;
+  		opacity: {theme="footer_backgroundimage_opacity"};
+  	{{endif}}
+}
+.footer-wrap .ta-Footer .ipsColumns .ipsColumn_veryWide{
+	width: 75%;
+}
+.footer-wrap .ta-Footer{
+	padding: 30px 0;
+}
+.ta-Footer .ipsLayout_container{
+	max-width: 100%;
+	padding: 0 20px;
+}
+#ipsLayout_footer .ipsLayout_container{
+	padding: 0 30px;
+}
+.footerBG{
+  	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	{{if theme.footer_bgimage}}
+	  	background-repeat: no-repeat;
+		background-size: cover;
+	  	background-position: 0 50%;
+	  	opacity: {theme="footer_backgroundimage_opacity"};
+	{{endif}}
+}
+.ta-Footer .about,.ta-Footer .quicklinks,.ta-Footer .mArticles{padding: 10px;border-radius: 4px;}
+.ipsApp.ipsApp_front .ta-Footer .about .ipsType_richText,.ta-Footer .quicklinks a,.ta-Footer .mArticles li > a{color: {theme="footer_fontcolor"};}
+.ta-Footer .about .ipsTruncate_more{color: {hextorgb="footer_fontcolor" opacity="0.55"};}
+.ta-Footer .quicklinks > ul > li:hover a{color: {theme="footer_fonthovers"};}
+.ta-Footer .quicklinks .ipsDataList li,
+.ta-Footer .mArticles li{
+	padding: 6px 5px 6px 5px;
+	text-transform: capitalize;
+	letter-spacing: .02em;
+  	border-bottom: 1px dashed {theme="footer_borders"};
+}
+.ta-Footer .quicklinks .ipsDataList li:hover,.ta-Footer .mArticles li:hover{cursor: pointer;}
+.ta-Footer .quicklinks .fa {font: normal normal bold 14px/1 FontAwesome;}
+.ta-Footer .quicklinks .ipsDataList li:hover i,
+.ta-Footer .mArticles ul li:hover > a{color: {theme="footer_fonthovers"}; }
+.ta-Footer .about h3,
+.ta-Footer .quicklinks h3,
+.ta-Footer .mArticles h3{
+	margin-bottom: 10px;
+	padding: 15px 0;
+	font-size: 14px;
+	font-weight: bold;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.3;
+	text-transform: uppercase;
+	color: {theme="footer_headercolor"};
+	letter-spacing: 1px;
+}
+.ta-Footer .about .socialLinks{
+	border-top: solid 1px {hextorgb="footer_headercolor" opacity="0.14"};
+	margin-top: 15px;
+	padding-top: 10px;
+}
+.ta-Footer .socialLinks a:not(:first-child){margin: 0 0 0 20px;}
+.mArticles li > span, .mArticles span > a {color: {hextorgb="footer_fontcolor" opacity="0.50"};}
+.mArticles span, .mArticles span a{
+	font-size: 11px ;
+	line-height: 1.1;
+	font-style: italic;
+}
+.ta-Footer .mArticles > ul,
+.mArticles li > span {
+    display: block;
+}
+.ta-Footer .quicklinks > ul {
+   	display: inline-block;
+	width: 50%;
+   	float: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.ta-Footer .quicklinks > ul:not(:last-child){
+	padding-right: 15px;
+}
+{{endif}}
+/*====\\Copyright footer//====>*/
+#ipsLayout_footer {
+  	position: relative;
+    background: {theme="footer_crbackground"};
+    margin: 0;
+  	padding: 30px 0;
+	text-align: center;
+}
+#elCopyright a:hover,
+#ipsLayout_footer #taCopyright:hover {
+	color: {hextorgb="footer_text" opacity="0.9"};
+}
+#ipsLayout_footer #taCopyright{
+	opacity: 0.6;
+  	font-size: 12px;
+  	color: {theme="footer_text"};
+}
+#elCopyright #taCopyright{
+	padding: 1px 5px;
+	border: 1px solid {hextorgb="footer_text" opacity="0.20"};
+	border-radius: 3px;
+	opacity: 1;
+}
+/* Back To Top.
+/==========================*/
+.ta_back-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: -50px;
+	background-color: {theme="alternate_button"};
+	opacity: .5;
+	z-index: 9999;
+}
+.ta_back-to-top.active {
+  bottom: 25px;
+}
+.ta_back-to-top:hover{
+	opacity: .9;
+}
+.ta_back-to-top,
+.ta_back-to-top .back-to-top-icon {
+	display: block;
+  width: 43px;
+  height: 43px;
+	border-radius: 25px;
+	{prefix="transition" value="0.1s ease-in-out"}
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+	-moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.ta_back-to-top,
+.ta_back-to-top .back-to-top-icon,
+.ta_back-to-top .back-to-top-icon i{
+	  line-height: 42px;
+}
+.ta_back-to-top .back-to-top-icon i {
+	  font-size: 27px;
+		font-weight: 700;
+    color: {theme="alternate_button_font"};
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+/* Custom Widgets.
+/==========================*/
+.ta-customBlock{
+	padding: 10px 20px;
+}
+.ta-blockContainer{
+	width: 100%;
+	margin: 5px 0;
+	padding: 15px 20px;
+    border-radius: 3px;
+	background-color: {theme="g_widget_background"};
+	-webkit-box-shadow: 0 2px 2.94px 0.06px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 2.94px 0.06px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2.94px 0.06px rgba(0, 0, 0, 0.2);
+}
+.ta-customBlock .ipsWidget_title{
+	font-size: 15px;
+	font-weight: 400;
+    text-transform: uppercase;
+	padding: 15px;
+	background-color: {theme="g_widget_title_bg"};
+	color: {theme="g_widget_title_color"};
+	border-radius: 4px 4px 4px 4px;
+}
+.ipsApp.ipsApp_front .ta-customBlock .ipsType_richText {
+	color: {theme="g_widget_content_color"};
+}
+.ta-customBlock > .ipsWidget_inner {
+	padding: 10px 35px;
+}
+/* Social Links.
+/==========================*/
+#elUserNav .cUserNav_icon .cShareLink {
+	display: inline-block;
+	padding-top: 0;
+}
+#elUserNav > li > a.cShareLink .fa {
+  	font-size: 14px;
+}
+#elUserNav_mobile > li > a.cShareLink .fa,
+#elFooterSocialLinks > li > a.cShareLink .fa {
+	font-size: 11px;
+	line-height: 28px;
+}
+#ipsLayout_footer #elFooterSocialLinks > li > a,
+#ipsLayout_footer .slContainer .socialLinks i {
+  	font-size: 14px !important;
+}
+#ipsLayout_footer .slContainer a {
+    position: relative;
+	display: block;
+}
+.cShareLink {
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.18);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.18);
+	box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.18);
+}
+/*<If custom colors>*/
+{{if theme.sl_customizecolor == '1'}}
+.slContainer .socialLinks .cShareLink{
+	background: none;
+}
+#elFooterSocialLinks > li > a,
+#ipsLayout_footer .slContainer .socialLinks i,
+#elUserNav > li > a.cShareLink .fa{
+  	color: {theme="sl_iconcolor"} !important;
+}
+#elFooterSocialLinks > li > a:hover,
+#elUserNav > li > a.cShareLink:hover,
+#ipsLayout_footer .slContainer a:hover{
+  	background: {theme="sl_iconhovercolor"};
+}
+#elFooterSocialLinks > li > a,
+.cUserNav_icon .cShareLink{
+  	background: {theme="sl_background"};
+}
+#ipsLayout_footer .slContainer a {
+  	background: {theme="sl_background"};
+}
+#ipsLayout_footer .slContainer .socialLinks i{
+  background: {hextorgb="sl_background" opacity="0.15"};
+}
+{{endif}}
+/*<In footer>*/
+#ipsLayout_footer #elFooterSocialLinks {
+	margin: 0;
+}
+#ipsLayout_footer #elFooterSocialLinks > li {
+	margin-right: 5px;
+}
+#ipsLayout_footer #elFooterSocialLinks > li > a {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+  padding: 2px;
+	text-align: center;
+  overflow: hidden;
+}
+#ipsLayout_footer #elFooterSocialLinks .cShareLink i{
+  	line-height: 35px;
+}
+/*<Fixed to sidebar>*/
+#ipsLayout_footer .slContainer {
+  	position: fixed;
+  	padding: 10px 0;
+	text-align: center;
+  	z-index: 9999;
+}
+#ipsLayout_footer .socialLinks:after{
+    bottom: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    border-radius: 4px 0 0 4px;
+    -webkit-box-shadow: inset -1px 0 0 0 rgba(255, 255, 255, .1);
+    -moz-box-shadow: inset -1px 0 0 0 rgba(255, 255, 255, .1);
+    box-shadow: inset -1px 0 0 0 rgba(255, 255, 255, .1);
+    z-index: 1;
+}
+#ipsLayout_footer .slContainer a {
+  	left: 100%;
+  	margin: 0 0 0 -40px;
+  	padding: 0 10px 0 0;
+	width: auto;
+	height: 40px;
+	border-radius: 0;
+	text-align: left;
+  	overflow: hidden;
+}
+#ipsLayout_footer .slContainer a:hover{
+	left: 0;
+}
+#ipsLayout_footer .slContainer .socialLinks{
+  	position: fixed;
+    right: 0;
+    top: 50%;
+  	padding: 5px 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#ipsLayout_footer .slContainer .socialLinks i{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 14px;
+}
+{{if theme.sl_style == 'circle'}}
+#ipsLayout_body > .slContainer a,
+.cUserNav_icon .cShareLink {
+		border-radius: 50%;
+}
+#ipsLayout_footer .slContainer a{
+	border-radius: 25px 0 0 25px;
+}
+#elUserNav > li > a.cShareLink .fa{
+    line-height: 28px;
+}
+{{else}}
+#elUserNav > li > a.cShareLink .fa{
+    line-height: 39px;
+}
+#elUserNav .cUserNav_icon .cShareLink{
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+}
+#ipsLayout_body > .slContainer a,
+.cUserNav_icon .cShareLink {
+		border-radius: 2px;
+}
+#ipsLayout_footer .slContainer a:first-child {
+    border-radius: 20px 0 0 0;
+}
+#ipsLayout_footer .slContainer a:last-child {
+    border-radius: 0 0 0 20px;
+}
+#ipsLayout_footer .slContainer a:only-of-type {
+	border-radius: 7px 0 0 7px;
+}
+#ipsLayout_footer .slContainer a:first-child:hover {
+    border-radius: 0;
+}
+#ipsLayout_footer .slContainer a:last-child:hover {
+    border-radius: 0;
+}
+{{endif}}
+/* Removing page headers.
+/==========================*/
+{{if theme.remove_page_headers}}
+	{{foreach explode(',', theme.remove_page_headers) as $val}}
+		{{if $val == 'forums'}}
+			body[data-pagemodule="forums"][data-pagecontroller="index"] #ipsLayout_mainArea > .ipsPageHeader > h1{ display: none; }
+		{{endif}}
+		{{if $val == 'clubs'}}
+			[data-pagemodule="clubs"][data-pagecontroller="directory"] #ipsLayout_mainArea > .ipsPageHeader > h1{ display: none; }
+		{{endif}}
+		{{if $val == 'store'}}
+			[data-pagemodule="store"][data-pagecontroller="store"] #ipsLayout_mainArea > .ipsPageHeader > h1{ display: none; }
+		{{endif}}
+		{{if $val == 'downloads'}}
+			[data-pagemodule="downloads"][data-pagecontroller="browse"] #ipsLayout_mainArea > .ipsPageHeader > h1{ display: none; }
+		{{endif}}
+		{{if $val == 'gallery'}}
+			[data-pagemodule="gallery"][data-pagecontroller="browse"] #ipsLayout_mainArea > .ipsPageHeader > h1{ display: none; }
+		{{endif}}
+		{{if $val == 'blogs'}}
+			[data-pagemodule="blogs"][data-pagecontroller="browse"] #ipsLayout_mainArea > .ipsPageHeader > h1{ display: none; }
+		{{endif}}
+		{{if $val == 'popular'}}
+			[data-pagemodule="discover"][data-pagecontroller="popular"] #ipsLayout_mainArea > .ipsPageHeader > h1{ display: none; }
+		{{endif}}
+	{{endforeach}}
+{{endif}}
+/* Widgets.
+/==========================*/
+#ipsLayout_sidebar {
+    min-width: {theme="sidebar_width"}px;
+    max-width: {theme="sidebar_width"}px;
+}
+.cWidgetContainer > ul > li.ipsWidgetHide:first-child + .ipsWidget_vertical,
+.cWidgetContainer > ul > li.ipsHide:first-child + .ipsWidget_vertical {
+    margin-top: 0;
+}
+.ipsWidget.ipsWidget_vertical{
+	  margin-top: 25px;
+}
+.ipsWidget.ipsWidget_vertical .ipsWidget_title,
+.ipsWidget.ipsWidget_horizontal .ipsWidget_title,
+.ipsType_sectionTitle{
+	padding: 15px 10px;
+	font-size: 14px;
+	letter-spacing: .07em;
+	font-weight: 700;
+}
+.ipsBox {
+	border-radius: 2px 2px 0 0 ;
+}
+.ipsType_sectionTitle {
+	border-radius: 3px 3px 0 0 ;
+}
+.ipsWidget.ipsWidget_vertical .ipsWidget_title,
+.ipsWidget.ipsWidget_horizontal .ipsWidget_title {
+    border-radius: 3px 3px 0 0;
+}
+.ipsWidget .ipsWidget_inner {
+	padding: 10px;
+}
+.ipsWidget.ipsWidget_vertical .ipsWidget_title{
+  	text-align: center;
+}
+.ipsDialog .ipsBox:not( .ipsBox_transparent):not( .ipsModerated),
+.ipsWidget.ipsWidget_horizontal .ipsBox {
+  	background-color: transparent;
+  	border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+/*====\\ipsBox//====>*/
+.ipsBox:not( .ipsBox_transparent):not( .ipsModerated),
+.cGalleryCat,
+.cNexusCategoryBlock,
+#elBlogHeader,
+#elEventHeader,
+#elBlogHeaderStats,
+#elEventHeader_details,
+#elClubHeader{
+	border-style: solid;
+	border-color: {theme="ipsbox_border"};
+	border-width: 1px 1px 1px 1px;
+  background-color: {theme="ipsbox_bg"};
+}
+.ipsBox {
+	border-color: {theme="ipsbox_border"};
+}
+/*====\\Widget title bar//====>*/
+.ipsWidget.ipsWidget_vertical .ipsWidget_title,
+.ipsWidget.ipsWidget_vertical .ipsTabs,
+.ipsWidget.ipsWidget_horizontal .ipsWidget_title,
+.ipsWidget.ipsWidget_horizontal .ipsTabs,
+.ipsTable.ipsMatrix thead th,
+.ipsApp.ipsApp_front .ipsTable th{
+    background-color: {theme="widget_title_bar"};
+}
+.ipsWidget.ipsWidget_vertical .ipsWidget_title,
+.ipsWidget.ipsWidget_horizontal .ipsWidget_title,
+.ipsTable.ipsMatrix thead th,
+.ipsApp.ipsApp_front .ipsTable th{
+    color: {theme="widget_title_font"};
+		border: solid {theme="widget_title_bar_border"};
+  	border-width: 1px 1px 2px 1px;
+}
+.ipsWidget,
+.ipsWidget.ipsWidget_vertical.ipsBox,
+.ipsWidget.ipsWidget_horizontal.ipsBox,
+.ipsWidget.ipsWidget_horizontal.ipsBox .ipsTabs_panel{
+	border-style: solid;
+	border-color: {theme="widget_borders"};
+	border-width: 1px 1px 1px 1px;
+	background-color: {theme="widget_bg"};
+}
+
+/*====\\Section title bar//====>*/
+.ipsType_sectionTitle{
+    background-color: {theme="section_title"};
+}
+.ipsTable.ipsMatrix .ipsMatrix_subHeader{
+	background-color: {theme="button_bar"};
+}
+.ipsType_sectionTitle{
+    border: solid {theme="section_title_bar_border"};
+    border-width: 1px 1px 2px 1px;
+}
+
+/* Pagination, Tabs, Buttons.
+/============================*/
+/*====\\Pagination//====>*/
+.ipsPagination.ipsPagination_mini a,
+.ipsButtonBar .ipsButtonRow li > button,
+.ipsApp .ipsButtonBar .ipsButtonRow li > a,
+.ipsApp .ipsButtonBar .ipsButtonRow li > span,
+.ipsApp .ipsButtonBar .ipsPagination .ipsPagination_page a,
+.ipsApp .ipsButtonBar .ipsPagination .ipsPagination_pageJump a,
+.ipsApp .ipsButtonBar .ipsPagination .ipsPagination_next a,
+.ipsApp .ipsButtonBar .ipsPagination .ipsPagination_prev a,
+.ipsApp .ipsButtonBar .ipsPagination .ipsPagination_first a,
+.ipsApp .ipsButtonBar .ipsPagination .ipsPagination_last a,
+.ipsPagination:not( .ipsPagination_mini ) .ipsPagination_page a,
+.ipsPagination:not( .ipsPagination_mini ) .ipsPagination_next a,
+.ipsPagination:not( .ipsPagination_mini ) .ipsPagination_prev a,
+.ipsPagination:not( .ipsPagination_mini ) .ipsPagination_first a,
+.ipsPagination:not( .ipsPagination_mini ) .ipsPagination_last a,
+.ipsButtonBar .ipsPagination .ipsPagination_pageJump a,
+.ipsPagination .ipsPagination_pageJump a {
+  	background: {theme="pagination_tabbg"};
+		color: {theme="pagination_fontcolor"};
+		border: 1px solid rgba(0, 0, 0, 0.07);
+		font-weight: bold;
+}
+.ipsButtonBar .ipsButtonRow li > button:hover,
+.ipsApp .ipsButtonBar .ipsButtonRow li > a:hover,
+.ipsApp .ipsButtonBar .ipsButtonRow li > span:hover,
+.ipsApp .ipsButtonBar .ipsPagination .ipsPagination_page a:hover,
+.ipsApp .ipsButtonBar .ipsPagination .ipsPagination_pageJump a:hover,
+.ipsApp .ipsButtonBar .ipsPagination .ipsPagination_next a:hover,
+.ipsApp .ipsButtonBar .ipsPagination .ipsPagination_prev a:hover,
+.ipsApp .ipsButtonBar .ipsPagination .ipsPagination_first a:hover,
+.ipsApp .ipsButtonBar .ipsPagination .ipsPagination_last a:hover,
+.ipsPagination:not( .ipsPagination_mini ) .ipsPagination_page a:hover,
+.ipsPagination:not( .ipsPagination_mini ) .ipsPagination_next a:hover,
+.ipsPagination:not( .ipsPagination_mini ) .ipsPagination_prev a:hover,
+.ipsPagination:not( .ipsPagination_mini ) .ipsPagination_first a:hover,
+.ipsPagination:not( .ipsPagination_mini ) .ipsPagination_last a:hover,
+.ipsButtonBar .ipsPagination .ipsPagination_pageJump a:hover,
+.ipsPagination .ipsPagination_pageJump a:hover{
+  	background: {hextorgb="pagination_active" opacity="0.85"};
+		color: {hextorgb="pagination_actifont" opacity="0.85"};
+}
+.ipsButtonBar .ipsPagination .ipsPagination_pageJump a,
+.ipsPagination .ipsPagination_pageJump a{
+	padding: 0 10px;
+	font-weight: bold;
+}
+.ipsPagination.ipsPagination_mini a{
+	padding: 1px 6px;
+}
+.ipsApp .ipsButtonBar .ipsPagination .ipsPagination_page.ipsPagination_active a,
+.ipsApp .ipsButtonBar .ipsButtonRow li > a.ipsButtonRow_active,
+.ipsPagination .ipsPagination_page.ipsPagination_active a {
+	background: {theme="pagination_active"};
+	color: {theme="pagination_actifont"};
+}
+.ipsPagination a {
+	border-radius: 0 !important;
+}
+.ipsButton_split .ipsButton_link {
+	background-color: rgba(255,255,255,0.08);
+}
+.ipsButton_split .ipsButton_link:hover {
+	background: {hextorgb="primary_button" opacity="0.50"};
+	background-image: none;
+	color: {theme="primary_button_font"};
+}
+.ipsApp.ipsApp_front .ipsButton:not(.ipsButton_link) {
+	border-radius: 4px;
+	letter-spacing: .5px;
+	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+.ipsApp.ipsApp_front .ipsButton_split .ipsButton {
+	border-radius: 0;
+}
+html[dir] .ipsButton_split > .ipsButton.ipsButton_link,
+html[dir] .ipsButton_split > li > .ipsButton.ipsButton_link {
+	border-color: transparent;
+}
+.ipsApp .ipsButton:not( .ipsButton_noHover ):not(.ipsButton_link):hover {
+	background-image: none;
+	opacity: 0.9;
+	-webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+}
+.ipsApp .ipsButton_fullWidth {
+    letter-spacing: .05em;
+    font-weight: 700;
+}
+.ipsApp .ipsButton_veryLight {
+	border-color: transparent;
+}
+/*====\\Tabs//====>*/
+.ipsApp.ipsApp_front .ipsTabs_panel {
+    background: {theme="tab_panelbg"};
+}
+.ipsTabs_item {
+	margin-right: 0;
+}
+.ipsApp.ipsApp_front .ipsTabs_item,
+.ipsApp .ipsButton_overlaid{
+    background: {theme="tabs_buttonbg"};
+	color: {theme="tabs_fontcolor"};
+}
+.ipsApp.ipsApp_front .ipsTabs_activeItem,
+.ipsApp .ipsButton_overlaid:hover,
+.cCalendar td.cCalendar_today,
+.cCalendarWeek div.cCalendar_today{
+	background: {theme="tabs_activebutton"};
+  color: {theme="tabs_actifocolor"};
+}
+.ipsApp.ipsApp_front .ipsTabs_item:not( .ipsTabs_activeItem ){
+    background: {theme="tabs_buttonbg"};
+	  color: {theme="tabs_fontcolor"} !important;
+}
+.ipsApp.ipsApp_front .ipsTabs_item:not( .ipsTabs_activeItem ):hover {
+	background: {theme="tabs_activebutton"};
+	color: {theme="tabs_actifocolor"} !important;
+}
+.ipsApp.ipsApp_front .ipsTabs_small .ipsTabs_activeItem {
+	border-bottom: 1px solid {hextorgb="important_button" opacity="0.5"};
+}
+.ipsApp.ipsApp_front .ipsTable_sortable.ipsTable_sortableActive{
+	background-color: {theme="tabs_activebutton"};
+    color: {theme="tabs_actifocolor"};
+}
+.ipsApp.ipsApp_front .ipsTable_sortable:hover{
+	background-color: {hextorgb="tabs_activebutton" opacity="0.85"};
+}
+.ipsApp.ipsApp_front .ipsTable.ipsMatrix .ipsMatrix_subHeader{
+	background-color: {theme="tab_background"};
+  	color: inherit;
+}
+#elTopContributors_content .ipsTabs_panel{
+  border: none;
+  box-shadow: none;
+}
+.ipsAreaBackground_light .ipsButtonRow li > a:not( .ipsButtonRow_active ),
+.ipsAreaBackground_light .ipsButtonRow li > button:not( .ipsButtonRow_active ),
+.ipsAreaBackground_light .ipsButtonRow li > span:not( .ipsButtonRow_active ),
+.ipsButtonRow li > a,
+.ipsButtonRow li > button,
+.ipsButtonRow li > span,
+.ipsMemberCard_controls.ipsButton,
+.ipsCalendarDate,
+.ipsWidget .ipsCalendarDate,
+.eventStreamDate .ipsCalendarDate,
+.ipsRichEmbed .ipsCalendarDate,
+.eventStreamDate .ipsCalendarDate,
+.ipsRichEmbed .ipsCalendarDate,
+.ipsApp .ipsButton_link.ipsFollow,
+.ipsApp .ipsButton_link.ipsPromote,
+#elSearch #elSearchFilter,
+.cStreamForm_list li a.ipsSideMenu_item.ipsSideMenu_itemActive + .cStreamForm_menu,
+.cStreamForm_list li a.ipsSideMenu_item:not( .ipsSideMenu_itemActive ):hover + .cStreamForm_menu {
+	background: {theme="light_button"};
+	color: {theme="light_button_font"};
+}
+#elSearch #elSearchFilter:hover{
+	background: {hextorgb="light_button" opacity="0.8"};
+}
+.eventStreamDate .ipsCalendarDate_month {
+	color: {theme="light_button_font"};
+}
+.ipsCalendarDate_date,
+.eventStreamDate .ipsCalendarDate_date {
+	color: {hextorgb="light_button_font" opacity="0.6"};
+}
+.ipsTabs_panels.ipsTabs_contained,
+.ipsTabs.ipsTabs_contained{
+	border: none;
+}
+/* Forms.
+/===================*/
+.ipsApp.ipsApp_front .ipsField_autocomplete,
+.ipsApp.ipsApp_front textarea,
+.ipsApp.ipsApp_front input[type="text"],
+.ipsApp.ipsApp_front input[type="password"],
+.ipsApp.ipsApp_front input[type="datetime"],
+.ipsApp.ipsApp_front input[type="datetime-local"],
+.ipsApp.ipsApp_front input[type="date"],
+.ipsApp.ipsApp_front input[type="month"],
+.ipsApp.ipsApp_front input[type="time"],
+.ipsApp.ipsApp_front input[type="week"],
+.ipsApp.ipsApp_front input[type="number"],
+.ipsApp.ipsApp_front input[type="email"],
+.ipsApp.ipsApp_front input[type="url"],
+.ipsApp.ipsApp_front input[type="search"],
+.ipsApp.ipsApp_front input[type="tel"],
+html[dir="ltr"] #form_promote_social_content_facebook .ipsFieldRow_content,
+html[dir="ltr"] #form_promote_social_content_twitter .ipsFieldRow_content,
+html[dir="ltr"] #form_promote_social_content_internal .ipsFieldRow_content,
+html[dir="rtl"] #form_promote_social_content_facebook .ipsFieldRow_content,
+html[dir="rtl"] #form_promote_social_content_twitter .ipsFieldRow_content,
+html[dir="rtl"] #form_promote_social_content_internal .ipsFieldRow_content {
+  	background-color: {theme="input_bg"};
+  	color: {theme="input_font"};
+ 	border: 1px solid {theme="input_bordercolor"};
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+.ipsApp.ipsApp_front textarea:focus,
+.ipsApp.ipsApp_front input[type="text"]:focus,
+.ipsApp.ipsApp_front input[type="password"]:focus,
+.ipsApp.ipsApp_front input[type="datetime"]:focus,
+.ipsApp.ipsApp_front input[type="datetime-local"]:focus,
+.ipsApp.ipsApp_front input[type="date"]:focus,
+.ipsApp.ipsApp_front input[type="month"]:focus,
+.ipsApp.ipsApp_front input[type="time"]:focus,
+.ipsApp.ipsApp_front input[type="week"]:focus,
+.ipsApp.ipsApp_front input[type="number"]:focus,
+.ipsApp.ipsApp_front input[type="email"]:focus,
+.ipsApp.ipsApp_front input[type="url"]:focus,
+.ipsApp.ipsApp_front input[type="search"]:focus,
+.ipsApp.ipsApp_front input[type="tel"]:focus,
+.ipsApp.ipsApp_front input[type="color"]:focus {
+	background-color: {theme="input_focusbg"};
+  	border-color: {theme="input_focusborder"};
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(94,109,179,.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(94,109,179,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px {hextorgb="input_focusborder" opacity="0.5"};
+
+}
+/*====\\Validation//====>*/
+.ipsApp.ipsApp_front input.ipsField_error,
+.ipsFieldRow_error textarea:not( .ipsFieldRow_errorExclude ),
+.ipsFieldRow_error input[type="text"]:not( .ipsFieldRow_errorExclude ),
+.ipsFieldRow_error input[type="password"]:not( .ipsFieldRow_errorExclude ),
+ .ipsFieldRow_error input[type="datetime"]:not( .ipsFieldRow_errorExclude ),
+.ipsFieldRow_error input[type="datetime-local"]:not( .ipsFieldRow_errorExclude ),
+ .ipsFieldRow_error input[type="date"]:not( .ipsFieldRow_errorExclude ),
+.ipsFieldRow_error input[type="month"]:not( .ipsFieldRow_errorExclude ),
+ .ipsFieldRow_error input[type="time"]:not( .ipsFieldRow_errorExclude ),
+.ipsFieldRow_error input[type="week"]:not( .ipsFieldRow_errorExclude ),
+ .ipsFieldRow_error input[type="number"]:not( .ipsFieldRow_errorExclude ),
+.ipsFieldRow_error input[type="email"]:not( .ipsFieldRow_errorExclude ),
+ .ipsFieldRow_error input[type="url"]:not( .ipsFieldRow_errorExclude ),
+.ipsFieldRow_error input[type="search"]:not( .ipsFieldRow_errorExclude ),
+ .ipsFieldRow_error input[type="tel"]:not( .ipsFieldRow_errorExclude ),
+.ipsFieldRow_error input[type="color"]:not( .ipsFieldRow_errorExclude ),
+.ipsApp.ipsApp_front input.ipsField_error:focus,
+.ipsFieldRow_error textarea:not( .ipsFieldRow_errorExclude ):focus,
+.ipsFieldRow_error input[type="text"]:not( .ipsFieldRow_errorExclude ):focus,
+.ipsFieldRow_error input[type="password"]:not( .ipsFieldRow_errorExclude ):focus,
+ .ipsFieldRow_error input[type="datetime"]:not( .ipsFieldRow_errorExclude ):focus,
+.ipsFieldRow_error input[type="datetime-local"]:not( .ipsFieldRow_errorExclude ):focus,
+ .ipsFieldRow_error input[type="date"]:not( .ipsFieldRow_errorExclude ):focus,
+.ipsFieldRow_error input[type="month"]:not( .ipsFieldRow_errorExclude ):focus,
+ .ipsFieldRow_error input[type="time"]:not( .ipsFieldRow_errorExclude ):focus,
+.ipsFieldRow_error input[type="week"]:not( .ipsFieldRow_errorExclude ):focus,
+ .ipsFieldRow_error input[type="number"]:not( .ipsFieldRow_errorExclude ):focus,
+.ipsFieldRow_error input[type="email"]:not( .ipsFieldRow_errorExclude ):focus,
+ .ipsFieldRow_error input[type="url"]:not( .ipsFieldRow_errorExclude ):focus,
+.ipsFieldRow_error input[type="search"]:not( .ipsFieldRow_errorExclude ):focus,
+ .ipsFieldRow_error input[type="tel"]:not( .ipsFieldRow_errorExclude ):focus,
+.ipsFieldRow_error input[type="color"]:not( .ipsFieldRow_errorExclude ):focus {
+	background-color: {hextorgb="messages_error" opacity="0.85"};
+	border-color: {theme="messages_error"};
+	color: {theme="messages_font"};
+}
+/*====\\Autocomplete//====>*/
+.ipsApp.ipsApp_front .ipsField_autocomplete input[type="text"] {
+    border: 0;
+    border-radius: 0px;
+    padding: 0;
+    background: transparent;
+    width: 20px;
+    max-width: 100%;
+    box-shadow: none;
+}
+.cToken {
+	background: {theme="tag"};
+}
+/* Toggles, checkboxes, Select Tree.
+/==================================*/
+/*====\\Checkboxes//====>*/
+.cForumMiniList .cForumMiniList_blob {
+	opacity: 1;
+}
+.cForumMiniList .cForumMiniList_blob > span {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.ipsApp .ipsToggle:focus, .ipsApp .ipsCustomInput input:focus + span {
+    outline: 0;
+    box-shadow: none;
+}
+.ipsCustomInput > span {
+	border: 1px solid;
+  border-radius: 1px;
+}
+.ipsCustomInput input[type="checkbox"] + span {
+	border-radius: 1px;
+}
+.ipsCustomInput > span,
+.cForumMiniList .cForumMiniList_blob > span {
+	background: {theme="checkbox_no"};
+}
+.ipsCustomInput > span,
+.ipsApp .ipsToggle:focus,
+.ipsApp .ipsCustomInput input:focus + span,
+.ipsCustomInput input:hover:not( :disabled ) + span {
+    border-color: {theme="checkbox_no"};
+}
+.ipsCustomInput input:checked + span,
+.cForumMiniList .cForumMiniList_blob,
+.ipsCustomInput input:active:not( :checked ):not( :disabled ) + span,
+.ipsCustomInput input:active:checked:not( :disabled ) + span {
+    background: {theme="checkbox_yes"};
+}
+.ipsCustomInput input:checked + span,
+.ipsApp .ipsCustomInput input:checked:focus + span,
+.ipsCustomInput input:checked:hover:not( :disabled ) + span {
+	border-color: {theme="checkbox_yes"};
+}
+.ipsCustomInput input[type="checkbox"]:checked + span:after {
+    color: {theme="checkbox_icon"};
+}
+.ipsCustomInput input[type="radio"]:checked + span:after {
+    background: {theme="checkbox_icon"};
+}
+/*====\\Toggles//====>*/
+.ipsToggle,
+.ipsApp .ipsToggle:focus {
+	border: none;
+	box-shadow: none;
+}
+.ipsToggle {
+	height: 18px;
+	width: 43px;
+	overflow: unset;
+ 	font-size: 0;
+}
+.ipsToggle span {
+	top: -2px;
+	height: 22px;
+	width: 22px;
+	border-radius: 15px;
+	box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.6);
+	z-index: 1;
+}
+html[dir="ltr"] .ipsToggle.ipsToggle_off span {
+	right: 21px;
+}
+html[dir="rtl"] .ipsToggle.ipsToggle_off span {
+	left: 21px;
+}
+html[dir="ltr"] .ipsToggle.ipsToggle_on span {
+	right: 0;
+}
+html[dir="rtl"] .ipsToggle.ipsToggle_on span {
+	left: 0;
+}
+.ipsToggle span:before,
+.ipsToggle span:after {
+	display: none;
+}
+.ipsToggle::before,
+.ipsToggle::after {
+    font-family: 'FontAwesome';
+    font-size: 10px;
+    text-transform: uppercase;
+    display: block;
+    position: absolute;
+    top: 0px;
+    line-height: 16px;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.15);
+}
+.ipsToggle::after {
+    content: '\f00c';
+		left: 4px;
+}
+.ipsToggle::before {
+	content: '\f00d';
+	right: 6px;
+}
+.ipsToggle.ipsToggle_on span {
+	background: {theme="toggle_on"};
+}
+.ipsToggle.ipsToggle_off span {
+	background: {theme="toggle_off"};
+}
+.ipsToggle::after {
+		color: {theme="toggle_on"};
+}
+.ipsToggle::before {
+		color: {theme="toggle_off"};
+}
+.ipsToggle.ipsToggle_off,
+.ipsToggle.ipsToggle_on {
+  background: {hextorgb="toggle_off" opacity="0.15"};
+}
+/*====\\Select Tree//====>*/
+.ipsApp.ipsApp_front .ipsSelectTree,
+.ipsApp.ipsApp_front .ipsSelectTree_nodes{
+	background: {theme="selecttree_bg"};
+}
+.ipsSelectTree_placeholder,
+.ipsSelectTree_expand,
+.ipsSelectTree_nodes [data-role="nodeList"] li .ipsSelectTree_toggle,
+.ipsApp.ipsApp_front .ipsSelectTree_itemDisabled > [data-role="nodeTitle"]{
+	color: {theme="selecttree_font"};
+}
+.ipsApp.ipsApp_front .ipsSelectTree_itemDisabled > [data-role="nodeTitle"]{
+  	font-weight: 600;
+}
+.ipsSelectTree_selected,
+.ipsSelectTree [data-role="tokenList"] .cToken,
+.ipsSelectTree_nodes [data-role="nodeList"] li .ipsSelectTree_item:not( .ipsSelectTree_itemDisabled ).ipsSelectTree_selected:hover{
+	background: {theme="tabs_activebutton"};
+	color: {theme="tabs_actifocolor"};
+}
+.ipsSelectTree_nodes [data-role="nodeList"] li .ipsSelectTree_item:not( .ipsSelectTree_itemDisabled ):hover{
+	background: {hextorgb="tabs_activebutton" opacity="0.2"};
+}
+.ipsApp.ipsApp_front .ipsSelectTree,
+.ipsApp.ipsApp_front .ipsSelectTree_active,
+.ipsApp.ipsApp_front .ipsSelectTree_nodes{
+	border: 2px solid {theme="selecttree_border"};
+}
+.ipsApp.ipsApp_front .ipsSelectTree_nodes [data-role="nodeList"]{
+	background: {theme="tab_panelbg"};
+  	border: 1px solid {theme="selecttree_border"};
+}
+html[dir="ltr"] .ipsApp.ipsApp_front .ipsSelectTree_nodes [data-role="nodeList"] li [data-role="childWrapper"]{
+	border-left: 1px dotted {theme="selecttree_border"};
+}
+html[dir="rtl"] .ipsApp.ipsApp_front .ipsSelectTree_nodes [data-role="nodeList"] li [data-role="childWrapper"]{
+	border-right: 1px dotted {theme="selecttree_border"};
+}
+.ipsApp.ipsApp_front .ipsSelectTree_nodes [data-role="nodeList"] li [data-role="childWrapper"]{
+	border-top: 1px dotted {theme="selecttree_border"};
+}
+html[dir="ltr"] .ipsApp.ipsApp_front .cStreamForm_nodes,
+html[dir="rtl"] .ipsApp.ipsApp_front .cStreamForm_nodes{
+	border-left: 2px solid {theme="ipsmenu_title_bg"};
+}
+.ipsApp.ipsApp_front select {
+  	background-color: {theme="input_bg"};
+ 	border-width: 1px;
+ 	border-style: solid;
+ 	border-color: {theme="input_bordercolor"};
+	border-radius: 3px;
+}
+.ipsApp.ipsApp_front select:focus {
+	background-color: {theme="input_focusbg"};
+  	border-color: {theme="input_focusborder"};
+	outline: 0;
+	box-shadow: 0 1px 1px {hextorgb="input_focusborder" opacity="0.2"}, 0px 1px 5px {hextorgb="input_focusborder" opacity="0.2"} inset ;
+}
+/* Editor.
+/===========*/
+{{if theme.custom_editorstyle == 1}}
+.ipsApp.ipsApp_front .ipsComposeArea_editor,
+.ipsApp.ipsApp_front .ipsComposeArea_unavailable .ipsComposeArea_editor{
+  	background: {theme="editor_comareabor"};
+}
+
+html[dir="ltr"] .ipsApp.ipsApp_front .ipsComposeArea_withPhoto .ipsComposeArea_editor:before{
+	border-color: transparent {theme="editor_comareabor"} transparent transparent;
+}
+.ipsApp.ipsApp_front .ipsComposeArea_dummy,
+.ipsApp.ipsApp_front .cke textarea.cke_source,
+.ipsApp.ipsApp_front .cke .cke_wysiwyg_frame,
+.ipsApp.ipsApp_front .cke .cke_wysiwyg_div,
+.ipsApp.ipsApp_front .cke .cke_inner{
+  	background: {theme="editor_areabg"};
+}
+.ipsApp.ipsApp_front .cke .cke_top {
+  	background: {theme="editor_toolbarbg"};
+}
+.ipsApp.ipsApp_front .cke_toolgroup span.cke_button_icon[style*="icons.png"]{
+	background-image: url('{resource="custom/editor_icon.png" app="core" location="front"}') !important;
+}
+.ipsApp.ipsApp_front .cke a.cke_button_off:hover,
+.ipsApp.ipsApp_front .cke a.cke_button_off:focus,
+.ipsApp.ipsApp_front .cke a.cke_button_off:active,
+.ipsApp.ipsApp_front .cke a.cke_button_disabled:hover,
+.ipsApp.ipsApp_front .cke a.cke_button_disabled:focus,
+.ipsApp.ipsApp_front .cke a.cke_button_disabled:active,
+.ipsApp.ipsApp_front .cke .cke_combo_off a.cke_combo_button:hover,
+.ipsApp.ipsApp_front .cke .cke_combo_off a.cke_combo_button:focus{
+  	background: {theme="editor_tlbartabhover"};
+	-webkit-box-shadow: 0 0 5px {hextorgb="editor_tlbartabhover" opacity="0.87"};, inset 0 0 1px 1px {hextorgb="editor_toolbartabson" opacity="0.87"};
+	-moz-box-shadow: 0 0 5px {hextorgb="editor_tlbartabhover" opacity="0.87"};, inset 0 0 1px 1px {hextorgb="editor_toolbartabson" opacity="0.87"};
+	box-shadow: 0 0 5px {hextorgb="editor_tlbartabhover" opacity="0.87"};, inset 0 0 1px 1px {hextorgb="editor_toolbartabson" opacity="0.87"};
+}
+.ipsApp.ipsApp_front .cke a.cke_button_on,
+.ipsApp.ipsApp_front .cke .cke_combo_off a.cke_combo_button:active,
+.ipsApp.ipsApp_front .cke .cke_combo_on a.cke_combo_button{
+	background: {theme="editor_toolbartabson"};
+  	border: none;
+	-webkit-box-shadow: 0 0 5px {hextorgb="editor_toolbartabson" opacity="0.87"};, inset 0 0 1px 1px {hextorgb="editor_toolbartabson" opacity="0.87"};
+	-moz-box-shadow: 0 0 5px {hextorgb="editor_toolbartabson" opacity="0.87"};, inset 0 0 1px 1px {hextorgb="editor_toolbartabson" opacity="0.87"};
+	box-shadow: 0 0 5px {hextorgb="editor_toolbartabson" opacity="0.87"};, inset 0 0 1px 1px {hextorgb="editor_toolbartabson" opacity="0.87"};
+}
+.ipsComposeArea_editorPaste .ipsComposeArea_editorPasteSwitch,
+.ipsComposeArea_editorPaste a:hover {
+	background: {theme="alternate_button"};
+	color: {theme="alternate_button_font"};
+}
+.ipsApp.ipsApp_front .cke a.cke_combo_button{
+	background: transparent;
+	border-color: transparent;
+	box-shadow: none;
+}
+.ipsApp.ipsApp_front .cke .cke_combo_on a.cke_combo_button,
+.ipsApp.ipsApp_front .cke .cke_combo_text,
+.ipsApp.ipsApp_front .cke .cke_button_label{
+	color: #B8B5B5;
+}
+.ipsApp.ipsApp_front .cke .cke_combo_arrow,
+.ipsApp.ipsApp_front .cke .cke_button_arrow{
+	border-top: 3px solid #9E9C9C;
+}
+.ipsApp.ipsApp_front .cke textarea.cke_source {
+	padding: 15px;
+}
+.ipsApp .cke_widget_wrapper:hover > .cke_widget_element,
+.ipsApp .cke_widget_wrapper:hover .cke_widget_editable{
+	outline-width: 1px;
+	outline-style: solid;
+	outline-color: {theme="editor_toolbarbg"};
+}
+.ipsApp .cke_widget_wrapper:hover .cke_widget_editable.cke_widget_editable_focused{
+	    box-shadow: none;
+}
+.ipsApp.ipsApp_front .ipsApp .cke_widget_wrapper:hover .cke_widget_editable.cke_widget_editable_focused {
+	box-shadow: none;
+}
+.ipsApp.ipsApp_front .cke_widget_wrapper.cke_widget_focused>.cke_widget_element,
+.ipsApp.ipsApp_front .cke_widget_wrapper .cke_widget_editable.cke_widget_editable_focused {
+    outline: none !important;
+}
+{{endif}}
+[data-role="replyArea"].ipsAreaBackground {
+    background: transparent;
+}
+/* Forums.
+/==================================*/
+.cPost.ipsModerated .ipsComment_content:before{
+	border-color: transparent {theme="moderated"} transparent transparent;
+}
+.cPost.ipsModerated .ipsComment_content{
+	background: {theme="moderated"};
+}
+.cPost.ipsModerated .ipsComment_content .ipsType_richText{
+	color: {theme="moderated_text"};
+}
+.cPost.ipsComment_highlighted .ipsComment_content{
+	background: {theme="post_highlight"};
+}
+.ipsComment.ipsComment_popular .ipsComment_popularFlag{
+	background: {theme="comment_popular"};
+}
+.ipsComment.ipsComment_popular .ipsComment_popularFlag:after {
+	border-color: {theme="comment_popular"} transparent transparent transparent;
+}
+.cPost.ipsComment_highlighted .ipsComment_content:before {
+	border-color: transparent {theme="post_highlight"} transparent transparent;
+}
+
+.ipsComment.ipsComment_selected .ipsComment_content,
+.ipsComment.ipsComment_selected .ipsComment_author,
+.cPost.ipsBox.ipsComment_selected:not( .ipsBox_transparent ):not( .ipsModerated ),
+.cPost.ipsBox.ipsModerated.ipsComment_selected:not( .ipsBox_transparent ){
+	background: {theme="selected"};
+}
+.ipsComment.ipsComment_highlighted.ipsComment_selected .ipsComment_content:before,
+.cPost.ipsModerated.ipsComment_selected .ipsComment_content:before,
+.ipsComment.ipsComment_selected .ipsComment_content:before{
+	border-color: transparent {theme="selected"} transparent transparent;
+}
+.ipsComment,
+.cPost.ipsBox:not( .ipsBox_transparent ):not( .ipsModerated ){
+	background: {theme="topic_background"};
+}
+.cPost.ipsComment .ipsComment_content{
+	border: none;
+  	-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.ipsComment:not( .ipsModerated ):not( .ipsComment_selected ).ipsBox.ipsComment_popular {
+	border-color: {theme="comment_popular"};
+	border-width: 5px 2px 2px 2px;
+	box-shadow: 0px 2px 5px {hextorgb="comment_popular" opacity="0.5"};
+}
+.ipsComposeArea_editor [data-action='closePreview'] {
+	margin-top: -20px;
+	margin-right: -20px;
+}
+.cForumGrid {
+    -webkit-box-shadow: 0 1px 15px 1px rgba(69,65,78,.08);
+    -moz-box-shadow: 0 1px 15px 1px rgba(69,65,78,.08);
+    box-shadow: 0 1px 15px 1px rgba(69,65,78,.08);
+}
+.cPost .ipsComment_content:before {
+  	content: '';
+  	position: absolute;
+	top: 7px;
+  	display: block;
+	width: 0;
+	height: 0;
+	border-width: 15px;
+	border-style: solid;
+	right: 100%;
+	border-color: transparent {theme="topic_background"} transparent transparent;
+  	z-index: 1;
+}
+.ipsComment.ipsComment_selected {
+	border-width: 2px;
+	border-color: {theme="selected"};
+	box-shadow: none;
+}
+.ipsCommentUnreadSeperator {
+	border-color: {theme="topic_unread_border"};
+}
+/*====\\Replacing the ugly forum icons//====>*/
+.ipsItemStatus.ipsItemStatus_large .fa-comments::before,
+.ipsItemStatus:not( .ipsItemStatus_large ) .fa-comments::before{
+	content: "\f108";
+}
+/*====\\Topic Author panel//====>*/
+.cPost .cAuthorPane {
+  	position: relative;
+  	border-radius: 4px 0 0 4px;
+    z-index: 0;
+}
+.cPost .cAuthorPane:before,
+.cPost .cAuthorPane:after {
+  	content: "";
+  	position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 0;
+		z-index: -1;
+}
+.ipsComment:not( .ipsModerated ) .ipsComment_header,
+.cNexusSupportMessage_m .cNexusSupportMessage_author,
+.cNexusSupportMessage_a .cNexusSupportMessage_author,
+.cPost .cAuthorPane:after,
+.cPost .cAuthorPane:before {
+	background-color: {theme="topic_author_panel"};
+}
+.cPost.ipsComment_highlighted .cAuthorPane:after{
+    top: 0;
+}
+.cAuthorPane_info li:last-child{
+	margin: 5px 0;
+}
+.ipsItemStatus_custom {
+	max-width: 40px;
+}
+.ipsBox.ipsModerated{
+	border-color: {theme="topic_background"};
+}
+.cForumList .ipsDataList.ipsDataList_zebra :not(:last-child).ipsDataItem {
+  	border-bottom: 2px solid {theme="area_background_reset"};
+}
+html[dir] .cPost .ipsComment_content{
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.cForumMiniList.cForumMiniList_multiRoot > li > a.cForumMiniList_selected {
+	background: {theme="section_title"};
+	color: {theme="section_title_font"};
+}
+.ipsCommentCount.ipsFaded,
+.cNexusActionBadge_off,
+.ipsAutocompleteMenu_item[data-selected],
+.ipsApp.ipsApp_front .ipsAutocompleteMenu,
+.ipsMenu_itemCount,
+.ipsSideMenu_itemCount,
+.ipsMenu_item:not( .ipsMenu_itemClicked ) a:hover .ipsMenu_itemCount,
+.ipsMenu_item:not( .ipsMenu_itemClicked ) button:hover .ipsMenu_itemCount,
+.ipsFollow .ipsCommentCount{
+	background: {theme="comment_count"};
+	color: {theme="comment_count_font"};
+}
+.ipsCommentCount,
+.ipsAutocompleteMenu_item[data-selected]{
+  	font-size: 16px;
+}
+.ipsCommentCount {
+    border-radius: 7px;
+}
+.ipsCommentCount:after{
+	margin-right: -1px;
+}
+html[dir="ltr"] .ipsFollow .ipsCommentCount:after { border-color: transparent {theme="comment_count"} transparent transparent; }
+html[dir="ltr"] .ipsCommentCount:after { border-right-color: {theme="comment_count"}; }
+html[dir="rtl"] .ipsCommentCount:after { border-left-color: {theme="comment_count"}; }
+
+html[dir="ltr"] .ipsWidget .ipsDataItem_main.cWidgetComments .ipsCommentCount,
+html[dir="rtl"] .ipsWidget .ipsDataItem_main.cWidgetComments .ipsCommentCount{
+  margin-right: -53px;
+}
+html[dir="ltr"] .ipsCommentCount.ipsFaded:after {
+	border-color: transparent {theme="comment_count"} transparent transparent;
+}
+html[dir="rtl"] .ipsCommentCount.ipsFaded:after {
+	border-color: transparent transparent transparent {theme="comment_count"};
+}
+.ipsCommentCount.ipsFaded,
+.cForumToggle{
+  opacity: 0.4;
+}
+{{if theme.topic_avatar_dimensions}}
+.cAuthorPane_info .ipsUserPhoto_large img{
+	width: {theme="topic_avatar_dimensions"}px;
+	height: {theme="topic_avatar_dimensions"}px;
+  	{{if theme.rounded_photos}}
+		border-radius: 50%;
+	{{endif}}
+}
+{{endif}}
+.cTopic .ipsColumn_medium {
+  	width: {theme="topic_author_panel_width"}px;
+}
+.cAuthorPane {
+    text-align: center;
+    padding: 15px 10px !important;
+}
+/*====\\Status Icons//====>*/
+.ipsItemStatus.ipsItemStatus_large {
+    font-size: 21px;
+}
+.ipsItemStatus.ipsItemStatus_large {
+  	color: {theme="item_status"};
+}
+.ipsItemStatus.ipsItemStatus_read{
+  	opacity: initial;
+  	color: {theme="item_status_notactive"};
+}
+.ipsItemStatus.ipsItemStatus_read:not( .ipsItemStatus_large ) {
+	color: {theme="item_status_notactive"};
+}
+img.ipsItemStatus.ipsItemStatus_read{
+	opacity: 0.6;
+}
+/*====\\Forum status hover effects Icons//====>*/
+.cForumRow > .ipsDataItem_icon {
+    position: relative;
+}
+.cForumList > .cForumRow > ol > li .ipsDataItem_icon .ipsItemStatus:after,
+.cForumList > ol > li .ipsDataItem_icon .ipsItemStatus:after {
+  	content: "";
+  	position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  	{prefix="transition" value="0.2s all linear"}
+}
+[dir="ltr"] .cForumList > .cForumRow > ol > li .ipsDataItem_icon .ipsItemStatus:after,
+[dir="ltr"] .cForumList > ol > li .ipsDataItem_icon .ipsItemStatus:after{
+    left: 0;
+}
+[dir="rtl"] .cForumList > .cForumRow > ol > li .ipsDataItem_icon .ipsItemStatus:after,
+[dir="rtl"] .cForumList > ol > li .ipsDataItem_icon .ipsItemStatus:after{
+    right: 0;
+}
+.cForumList > .cForumRow > ol > li .ipsDataItem_icon .ipsItemStatus:after,
+.cForumList > ol > li .ipsDataItem_icon .ipsItemStatus:after{
+    background-color: {hextorgb="item_status" opacity="0.02"};
+}
+.cForumList > .cForumRow > ol > li .ipsDataItem_icon .ipsItemStatus.ipsItemStatus_read:after,
+.cForumList > ol > li .ipsDataItem_icon .ipsItemStatus.ipsItemStatus_read:after{
+    background-color: {hextorgb="item_status_notactive" opacity="0.02"};
+}
+.cForumList > .cForumRow > ol > li:hover .ipsDataItem_icon .ipsItemStatus:after,
+.cForumList > ol > li:hover .ipsDataItem_icon .ipsItemStatus:after{
+    width: 3px;
+    background-color: {hextorgb="item_status" opacity="0.45"};
+}
+.cForumList > .cForumRow > ol > li:hover .ipsDataItem_icon .ipsItemStatus.ipsItemStatus_read:after,
+.cForumList > ol > li:hover .ipsDataItem_icon .ipsItemStatus.ipsItemStatus_read:after{
+    width: 2px;
+    background-color: {hextorgb="item_status_notactive" opacity="0.45"};
+}
+/* Quotes, Codes.
+/====================*/
+.ipsQuote,
+.ipsSpoiler,
+.ipsCode,
+.ipsEmbedded_content,
+iframe[data-embedContent]{
+  	background: {theme="ipsquotecode_bg"};
+}
+.ipsQuote,
+.ipsSpoiler{
+	border: none;
+}
+.ipsQuote_citation,
+.ipsSpoiler_header{
+	background: {theme="ipsquote_hdr"};
+  	border-radius: 4px 0 0 0;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.ipsQuote_citation.ipsQuote_closed{
+  	border-radius: 4px 0 0 4px;
+}
+.ipsQuote_citation,
+.ipsQuote .ipsQuote_citation a,
+.ipsSpoiler_header,
+.ipsSpoiler_header a{
+  	color: {theme="ipsquote_fontclr"};
+}
+.ipsQuote_citation.ipsQuote_open [data-action='toggleQuote']:before,
+.ipsSpoiler_header.ipsSpoiler_open [data-action='toggleSpoiler']:before{
+    content: "\f078";
+    color: {theme="ipsquote_fontclr"};
+}
+.ipsQuote_citation.ipsQuote_closed [data-action='toggleQuote']:before,
+.ipsSpoiler_header.ipsSpoiler_closed [data-action='toggleSpoiler']:before{
+	content: '\f054';
+    color: {theme="ipsquote_fontclr"};
+}
+.ipsQuote_citation .fa {
+	opacity: 0.4;
+}
+.ipsQuote .ipsQuote_contents,
+.ipsSpoiler_contents{
+	border: 1px solid transparent;
+}
+.ipsCode{
+  	border-left: 3px solid {theme="important_button"} !important;
+}
+.ipsEmbedded_headerArea{
+	background: {theme="ipsquote_hdr"};
+}
+.ipsEmbedded_headerArea a,
+.ipsEmbedded_headerArea i{
+  	color: {theme="ipsquote_fontclr"};
+}
+.ipsImage_thumbnailed,
+.ipsAttach_selection,
+.cBlogView_entry{
+	border: none;
+}
+.ipsImageAttach_thumb{
+	background-color: {theme="area_background_light"};
+}
+
+/* Notifications.
+/===================*/
+#elFullNotifications_menu .ipsDataItem:not( .ipsDataItem_unread ):not( .ipsDataItem_selected ):not( .ipsModerated ),
+#elFullInbox_menu .ipsDataItem:not( .ipsDataItem_unread ):not( .ipsDataItem_selected ):not( .ipsModerated ),
+#elFullReports_menu .ipsDataItem:not( .ipsDataItem_unread ):not( .ipsDataItem_selected ):not( .ipsModerated ),
+[data-pagecontroller="notifications"] .cForumTopicTable .ipsDataItem{
+	background: {theme="notification_readbg"};
+}
+#elFullNotifications_menu .ipsDataItem:not( .ipsDataItem_unread ):not( .ipsDataItem_selected ):not( .ipsModerated ) a,
+#elFullInbox_menu .ipsDataItem:not( .ipsDataItem_unread ):not( .ipsDataItem_selected ):not( .ipsModerated ) a,
+#elFullReports_menu .ipsDataItem:not( .ipsDataItem_unread ):not( .ipsDataItem_selected ):not( .ipsModerated ) a,
+[data-pagecontroller="notifications"] .cForumTopicTable .ipsDataItem a{
+	color: {theme="notification_readfont"};
+}
+#elFullNotifications_menu .ipsDataItem:not( .ipsDataItem_unread ):not( .ipsDataItem_selected ):not( .ipsModerated ) .ipsType_light,
+#elFullInbox_menu .ipsDataItem:not( .ipsDataItem_unread ):not( .ipsDataItem_selected ):not( .ipsModerated ) .ipsType_light,
+#elFullInbox_menu .ipsDataItem:not( .ipsDataItem_unread ):not( .ipsDataItem_selected ):not( .ipsModerated ) .ipsDataItem_meta,
+#elFullReports_menu .ipsDataItem:not( .ipsDataItem_unread ):not( .ipsDataItem_selected ):not( .ipsModerated ) .ipsDataItem_icon i,
+#elFullReports_menu .ipsDataItem:not( .ipsDataItem_unread ):not( .ipsDataItem_selected ):not( .ipsModerated ) .ipsDataItem_meta li.ipsType_light,
+[data-pagecontroller="notifications"] .cForumTopicTable .ipsDataItem .ipsType_light{
+	color: {hextorgb="notification_readfont" opacity="0.7"};
+}
+#elFullReports_menu .ipsDataItem:not( .ipsDataItem_unread ):not( .ipsDataItem_selected ):not( .ipsModerated ) .ipsDataItem_meta li{
+	color: {hextorgb="notification_readfont" opacity="0.5"};
+}
+#elFullNotifications_menu .ipsDataItem.ipsDataItem_unread,
+#elFullInbox_menu .ipsDataItem.ipsDataItem_unread,
+#elFullReports_menu .ipsDataItem.ipsDataItem_unread,
+#elCart_menu,
+[data-pagecontroller="notifications"] .cForumTopicTable .ipsDataItem.ipsDataItem_unread{
+	background: {theme="notification_unreadbg"};
+}
+#elFullNotifications_menu .ipsDataItem_unread a,
+#elFullInbox_menu .ipsDataItem_unread a,
+#elFullReports_menu .ipsDataItem_unread a,
+#elCart_menu,
+[data-pagecontroller="notifications"] .cForumTopicTable .ipsDataItem.ipsDataItem_unread a{
+	color: {theme="notification_unreadfont"};
+}
+#elFullNotifications_menu .ipsDataItem_unread .ipsType_light,
+#elFullInbox_menu .ipsDataItem_unread .ipsType_light,
+#elFullInbox_menu .ipsDataItem_unread .ipsDataItem_meta,
+#elFullReports_menu .ipsDataItem_unread .ipsDataItem_icon i,
+#elFullReports_menu .ipsDataItem_unread .ipsDataItem_meta li.ipsType_light,
+#elCart_menu .ipsType_light,
+[data-pagecontroller="notifications"] .cForumTopicTable .ipsDataItem.ipsDataItem_unread .ipsType_light{
+	color: {hextorgb="notification_unreadfont" opacity="0.7"};
+}
+#elFullReports_menu .ipsDataItem_unread .ipsDataItem_meta li{
+	color: {hextorgb="notification_unreadfont" opacity="0.5"};
+}
+#elFullNotifications_menu.ipsMenu.ipsMenu_topRight:after,
+#elFullNotifications_menu.ipsMenu.ipsMenu_topLeft:after,
+#elFullNotifications_menu.ipsMenu.ipsMenu_topCenter:after,
+#elFullInbox_menu.ipsMenu.ipsMenu_topRight:after,
+#elFullInbox_menu.ipsMenu.ipsMenu_topLeft:after,
+#elFullInbox_menu.ipsMenu.ipsMenu_topCenter:after,
+#elFullReports_menu.ipsMenu.ipsMenu_topRight:after,
+#elFullReports_menu.ipsMenu.ipsMenu_topLeft:after,
+#elFullReports_menu.ipsMenu.ipsMenu_topCenter:after{
+    border-color: {theme="ipsmenu_title_bg"} transparent transparent transparent;
+}
+#elFullNotifications_menu.ipsMenu.ipsMenu_bottomRight:after,
+#elFullNotifications_menu.ipsMenu.ipsMenu_bottomLeft:after,
+#elFullNotifications_menu.ipsMenu.ipsMenu_bottomCenter:after,
+#elFullInbox_menu.ipsMenu.ipsMenu_bottomRight:after,
+#elFullInbox_menu.ipsMenu.ipsMenu_bottomLeft:after,
+#elFullInbox_menu.ipsMenu.ipsMenu_bottomCenter:after,
+#elFullReports_menu.ipsMenu.ipsMenu_bottomRight:after,
+#elFullReports_menu.ipsMenu.ipsMenu_bottomLeft:after,
+#elFullReports_menu.ipsMenu.ipsMenu_bottomCenter:after{
+	border-color: transparent transparent {theme="ipsmenu_title_bg"} transparent;
+}
+/* Profiles score, Reputation.
+/============================*/
+/*====\\Profile scores//====>*/
+.cProfileRepScore_positive {
+	background: {theme="repscore_positivebg"};
+  	color: {theme="repscore_positivecol"};
+}
+.cProfileRepScore_negative {
+	background: {theme="repscore_negativebg"};
+  	color: {theme="repscore_negativecol"};
+}
+.cProfileRepScore_neutral {
+	background: {theme="repscore_neutralbg"};
+  	color: {theme="repscore_neutralcol"};
+}
+#elFollowers .ipsWidget_inner > .ipsSpacer_top,
+#elFollowers .ipsWidget_inner > p{
+	margin-top: 0;
+  	margin: 0;
+  	padding-top: 15px;
+}
+/*====\\Reputation//====>*/
+	.ipsReact_button,
+.ipsReact_types ul,
+.ipsReact_name,
+body.ipsApp_noTouch .ipsReact_types:hover .ipsReact_button,
+body:not( .ipsApp_noTouch ) .ipsReact_types.ipsReact_types_active .ipsReact_button {
+	background: {hextorgb="react_bg" opacity="0.70"};
+}
+.ipsReact_reactCount {
+	background: {hextorgb="light_button" opacity="0.70"};
+	border-color: rgba(0,0,0,0.03);
+}
+.ipsReact_reactCount > span > span:last-child,
+.ipsReact_reactCount > a > span:last-child {
+	background: {hextorgb="light_button" opacity="0.70"};
+	color: {hextorgb="light_button_font" opacity="0.90"};
+}
+.ipsReact_unreact {
+	background: {hextorgb="light_button" opacity="0.90"};
+	color: {hextorgb="light_button_font" opacity="0.90"};
+}
+.ipsReactOverview ul img{
+	border: 2px solid {hextorgb="react_bg" opacity="0.90"};
+}
+.ipsReact_reactCount{
+	padding-left: 5px;
+}
+.ipsReact_reactCount span:last-child{
+	background: {theme="react_bg"};
+	padding: 0 9px;
+}
+html[dir="ltr"] .ipsReact_types ul li {
+    padding: 0 2px;
+}
+html[dir="ltr"] .ipsReact_blurb:not( .ipsHide ) + .ipsReact_types{
+	border-left: 1px solid {theme="react_bg"};
+}
+html[dir="rtl"] .ipsReact_unreact{
+	left: -7px;
+	top: -7px;
+}
+html[dir="ltr"] .ipsReact_unreact{
+	right: -7px;
+	top: -7px;
+}
+/* Mobie navigation, drop-down menus
+/===================================*/
+/*====\\Mobie navigation//====>*/
+#elMobileNav {
+  	border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+.ipsDrawer_close{
+	background: {theme="important_button"};
+  	color: {theme="important_button_font"};
+}
+.ipsDrawer_close:hover{
+  	color: {hextorgb="important_button_font" opacity="0.75"};
+}
+.ipsDrawer_list [data-action="back"] a{
+	background: {theme="light_button"};
+	color: {theme="light_button_font"} !important;
+}
+.ipsDrawer_menu {
+  	background: {theme="main_nav_bg"};
+}
+.ipsDrawer_itemParent > h4,
+.ipsDrawer_list > li > a:not( .ipsButton ),
+.ipsDrawer_list > li:not( .ipsDrawer_itemParent ) > a:not( .ipsButton ){
+	color: {theme="main_nav_font"};
+}
+.ipsDrawer_itemParent > h4,
+.ipsDrawer_list > li > a:not( .ipsButton ),
+.ipsDrawer_list > li:not( .ipsDrawer_itemParent ) > a:not( .ipsButton ) {
+	border-bottom: none;
+	border-top: 1px solid {hextorgb="main_nav_font" opacity="0.2"};
+}
+/*====\\drop-down menus//====>*/
+.ipsApp.ipsApp_front #modcp_menu {
+	padding: 7px;
+}
+.ipsApp.ipsApp_front .ipsSideMenu_title {
+	margin: 5px 0;
+	padding: 5px 7px;
+}
+.ipsMenu {
+	border: 1px solid rgba(0, 0, 0, 0.10);
+}
+.ipsMenu,
+.ipsSideMenu,
+.ipsApp.ipsApp_front #modcp_menu,
+.ipsApp.ipsApp_front .cForumMiniList_wrapper {
+	background: {theme="ipsmenu_bg"};
+}
+.ipsMenu_item > a:not( .ipsMenu_itemInline ),
+.ipsMenu_item > span:not( .ipsMenu_itemInline ),
+#elNavTheme_menu .ipsMenu_item .ipsButton_link {
+	color: {theme="ipsmenu_font"};
+}
+.ipsMenu_headerBar,
+.ipsMenu_footerBar,
+.ipsSideMenu_title {
+	background: {theme="ipsmenu_title_bg"};
+}
+.ipsMenu_headerBar{
+	border-bottom: 1px solid {theme="ipsmenu_title_bg"};
+}
+.ipsMenu_footerBar{
+	border-top: 1px solid {theme="ipsmenu_title_bg"};
+}
+.ipsMenu_headerBar .ipsType_sectionHead,
+.ipsMenu_title,
+.ipsMenu_headerBar > a,
+.ipsMenu_footerBar > a,
+.ipsSideMenu_title,
+.ipsMenu .cStreamForm_title {
+	color: {theme="ipsmenu_title_color"};
+}
+#elUserSignIn_menu .ipsType_sectionHead {
+	color: {hextorgb="ipsmenu_font" opacity="0.9"};
+}
+#elUserSignIn_menu .ipsType_right.ipsType_small a,
+#elUserSignIn_menu .ipsFieldRow_label {
+	color: {theme="ipsmenu_font"};
+}
+#elUserSignIn_menu .ipsFieldRow_desc {
+	color: {hextorgb="ipsmenu_font" opacity="0.75"};
+}
+.ipsMenu_title,
+#elSearchExpanded .ipsMenu_title {
+  text-align: center;
+	background: {theme="ipsmenu_title_bg"};
+}
+#elSearchExpanded .ipsMenu_title,
+#elSearchExpanded .ipsSideMenu_list {
+	border-color: rgba(0, 0, 0, 0.10);
+}
+.ipsMenu_sep {
+  	border-top: 1px solid {theme="ipsmenu_title_bg"};
+}
+.ipsMenu_selectable > h3,
+.ipsMenu_selectable > li > h3{
+  	color: inherit;
+}
+.ipsMenu.ipsMenu_bottomRight:before,
+.ipsMenu.ipsMenu_bottomLeft:before,
+.ipsMenu.ipsMenu_bottomCenter:before{
+  	border-color: transparent transparent rgba(0, 0, 0, 0.2) transparent;
+}
+.ipsMenu.ipsMenu_bottomRight:after,
+.ipsMenu.ipsMenu_bottomLeft:after,
+.ipsMenu.ipsMenu_bottomCenter:after{
+  	border-color: transparent transparent {theme="ipsmenu_bg"} transparent;
+}
+.ipsMenu.ipsMenu_topRight:before,
+.ipsMenu.ipsMenu_topLeft:before,
+.ipsMenu.ipsMenu_topCenter:before{
+	border-color: rgba(0, 0, 0, 0.2) transparent transparent transparent;
+}
+.ipsMenu.ipsMenu_topRight:after,
+.ipsMenu.ipsMenu_topLeft:after,
+.ipsMenu.ipsMenu_topCenter:after{
+	border-color: {theme="ipsmenu_bg"} transparent transparent transparent;
+}
+.ipsSideMenu_item a,
+a.ipsSideMenu_item,
+span.ipsSideMenu_item {
+	color: {hextorgb="ipsmenu_font" opacity="0.8"};
+}
+.ipsSideMenu_item:not( .ipsSideMenu_itemActive ) a:hover,
+a.ipsSideMenu_item:not( .ipsSideMenu_itemActive ):hover,
+span.ipsSideMenu_item:not( .ipsSideMenu_itemActive ):hover,
+.cForumMiniList > li > a.cForumMiniList_selected {
+	background: {theme="ipsmenu_bghover"};
+}
+#elSearchExpanded .ipsSideMenu_item:not( .ipsSideMenu_itemActive ) a:hover,
+#elSearchExpanded a.ipsSideMenu_item:not( .ipsSideMenu_itemActive ):hover,
+#elSearchExpanded span.ipsSideMenu_item:not( .ipsSideMenu_itemActive ):hover {
+	background: none;
+}
+#elSearchExpanded .ipsSideMenu_list {
+	background: {theme="ipsmenu_bg"};
+}
+.ipsSideMenu_withChecks .ipsSideMenu_item a:after,
+.ipsSideMenu_withChecks a.ipsSideMenu_item:after,
+.ipsSideMenu_withChecks span.ipsSideMenu_item:after,
+.ipsSideMenu_withRadios .ipsSideMenu_item a:after,
+.ipsSideMenu_withRadios a.ipsSideMenu_item:after,
+.ipsSideMenu_withRadios span.ipsSideMenu_item:after {
+	color: {hextorgb="ipsmenu_font" opacity="0.4"};
+}
+.ipsSideMenu_withChecks .ipsSideMenu_itemActive a:after,
+.ipsSideMenu_withChecks a.ipsSideMenu_itemActive:after,
+.ipsSideMenu_withChecks span.ipsSideMenu_itemActive:after,
+.ipsSideMenu_withRadios .ipsSideMenu_itemActive a:after,
+.ipsSideMenu_withRadios a.ipsSideMenu_itemActive:after,
+.ipsSideMenu_withRadios span.ipsSideMenu_itemActive:after,
+.ipsSideMenu_withChecks .ipsSideMenu_item > input[type="checkbox"]:checked ~ a:after,
+.ipsSideMenu_withChecks .ipsSideMenu_item > input[type="checkbox"]:checked ~ span:after,
+.ipsSideMenu_withRadios .ipsSideMenu_item > input[type="radio"]:checked ~ a:after,
+.ipsSideMenu_withRadios .ipsSideMenu_item > input[type="radio"]:checked ~ span:after {
+	color: {theme="ipsmenu_fonthover"};
+}
+
+ul:not( .ipsMenu_keyNav ) .ipsMenu_item:not( .ipsMenu_itemClicked ):not( .ipsMenu_itemDisabled ) a:not( .ipsMenu_itemInline ):hover,
+.ipsMenu_item[data-selected] a,
+.ipsMenu_item[data-selected] span,
+.ipsMenu_item.ipsMenu_hover,
+/**/
+.ipsSideMenu_itemActive a,
+a.ipsSideMenu_itemActive,
+span.ipsSideMenu_itemActive,
+.ipsSideMenu_withChecks .ipsSideMenu_item > input[type="checkbox"]:checked ~ a,
+.ipsSideMenu_withChecks .ipsSideMenu_item > input[type="checkbox"]:checked ~ span,
+.ipsSideMenu_withRadios .ipsSideMenu_item > input[type="radio"]:checked ~ a,
+.ipsSideMenu_withRadios .ipsSideMenu_item > input[type="radio"]:checked ~ span,
+/**/
+#elNavTheme_menu .ipsMenu_item.ipsMenu_itemChecked .ipsButton_link
+{
+    background: {theme="ipsmenu_bghover"};
+	color: {theme="ipsmenu_fonthover"};
+}
+/* Search
+/=========*/
+#elSearchExpanded {
+    top: 60px;
+		left: 0;
+		border-radius: 4px;
+		border: none;
+		background: {theme="ipsmenu_bg"};
+}
+
+#elSearchExpanded::after,
+#elSearchExpanded::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    right: 10px;
+    width: 0;
+    height: 0;
+}
+#elSearchExpanded::after {
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+	border-bottom: 9px solid {theme="ipsmenu_bg"};
+}
+#elSearchExpanded::before {
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+	border-bottom: 9px solid rgba(0, 0, 0, 0.2);
+}
+html[dir="ltr"] #elSearchExpanded {
+	right: 0;
+    left: auto;
+}
+/* Miscellaneous.
+/===================*/
+.ipsType_sectionHead {
+	color: {theme="ipstype_sectionhead"};
+}
+.ipsType_minorHeading {
+	color: {theme="ipstype_minorheading"};
+}
+.cPastLeaders_title span,
+.cPastLeaders_cell,
+.cPastLeaders_title:before,
+.cCalendar td.cCalendar_nonDate,
+.cForumMiniList_categorySelected,
+.ipsMemberCard,
+.ipsDataList.ipsDataList_zebra.cTopicList,
+.ipsDataList.ipsDataList_zebra[data-role="tableRows"],
+.ipsSticky,
+#elDownloadsSubmit_progress.ipsSticky
+{
+    background: {theme="area_background_reset"};
+}
+.ipsBox .ipsAreaBackground_light,
+.ipsAttachment_dropZone.ipsDragging,
+.ipsComposeArea_dropZone.ipsDragging,
+.ipsDataList.ipsDataList_zebra .ipsDataItem:not( .ipsDataItem_selected ):not( .ipsModerated ):nth-child(even),
+.cStatusUpdates .ipsComment.ipsComment_hasChildren > .ipsComment_content,
+.ipsApp.ipsApp_front .ipsFieldRow_section,
+.cPayment,
+.cRatingColumn_on{
+	background-color: {theme="area_background_light"};
+}
+body.ipsApp.ipsApp_front,
+.ipsApp.ipsApp_front .ipsType_richText,
+.cPromoteCount:not( .ipsType_issue ):not( .ipsType_negative ),
+.cPastLeaders_cell:after,
+.cPopularItem_stats,
+.pln {
+    color: {theme="text_color"};
+}
+body.ipsApp.ipsLayout_noBackground {
+    background: none;
+		background-image: none;
+    box-shadow: none;
+}
+.ipsApp select:not( [multiple] ) {
+    background-image: none!important;
+}
+body.unloaded #ipsEmbedLoading,
+iframe[data-embedContent].ipsEmbed_finishedLoading {
+	background-color: {theme="topic_author_panel"};
+	background-image: none;
+	border: 1px solid {theme="topic_author_panel"};
+}
+a.ipsType_blendLinks:hover:not(.ipsType_noUnderline),
+.ipsType_blendLinks:not(.ipsType_noUnderline) a:hover:not(.ipsType_noUnderline),
+.ipsWidget.ipsWidget_vertical .ipsWidget_inner,
+.cProfileSidebarBlock .ipsType_sectionHead,
+.ipsPager_type, .ipsPager a .ipsType_light,
+.ipsPager .ipsPager_next a:after,
+.ipsPager .ipsPager_prev a:after,
+.ipsComment_meta a[data-action="reportComment"],
+.ipsType_sectionTitle .ipsType_light,
+.ipsWidget_title .ipsType_light,
+.ipsWidget_title a,
+.ipsFieldRow_desc,
+.ipsDataItem_statsLarge .ipsType_light,
+.ipsEmpty,
+.ipsApp.ipsApp_front .ipsFieldRow_section,
+.ipsCarousel .ipsCarousel_nav,
+.ipsAreaBackground_positive .ipsType_sectionHead,
+.ipsAreaBackground_positive .ipsType_sectionTitle,
+.ipsAreaBackground_negative .ipsType_sectionHead,
+.ipsAreaBackground_negative .ipsType_sectionTitle,
+.ipsBreadcrumb > ul > li,
+.ipsMenu_selectable .ipsMenu_item:not( .ipsMenu_itemNonSelect ) a:before,
+.ipsMenu_selectable .ipsMenu_item:not( .ipsMenu_itemNonSelect ) > span:before,
+.ipsMenu_selectable .ipsMenu_item:not( .ipsMenu_itemNonSelect ) button:before,
+.cPastLeaders_cell:after,
+.cPastLeaders_title span,
+.ipsReact_reactCount span:last-child,
+.cForumMiniList.cForumMiniList_multiRoot > li > a{
+  	color: inherit;
+}
+.ipsApp.ipsApp_front .ipsType_pageTitle{
+  	color: inherit;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+}
+a[data-mentionid],mark {
+	background-color: {theme="mentions"}!important;
+	color: {theme="mentions_font"}!important;
+}
+a {
+	{prefix="transition" value="0.1s all linear"}
+}
+.ipsGrid a {
+  -webkit-transition: unset !important;
+  -moz-transition: unset !important;
+  -ms-transition: unset !important;
+  -o-transition: unset !important;
+  transition: unset !important;
+}
+.ipsApp.ipsApp_front #elSiteTitle {
+	color: {theme="site_titlefont"};
+}
+/*====\\icon shadows//====>*/
+#elUserNav > li > a:not(.cShareLink) .fa,
+.cForumToggle:after,
+html[dir="ltr"] .ipsPager .ipsPager_prev a:after,
+html[dir="rtl"] .ipsPager .ipsPager_next a:after,
+html[dir="ltr"] .ipsPager .ipsPager_next a:after,
+html[dir="rtl"] .ipsPager .ipsPager_prev a:after,
+.ipsQuote_citation.ipsQuote_open [data-action='toggleQuote']:before,
+.ipsQuote_citation.ipsQuote_closed [data-action='toggleQuote']:before,
+.ipsSpoiler_header.ipsSpoiler_closed [data-action='toggleSpoiler']:before,
+.ipsSpoiler_header.ipsSpoiler_open [data-action='toggleSpoiler']:before,
+[data-pagemodule="gallery"] .fa-angle-right:before,
+[data-pagemodule="gallery"] .fa-angle-left:before{
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.ipsItemStatus.ipsItemStatus_large,
+.ipsItemStatus:not( .ipsItemStatus_large ){
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+/*====\\ipsBreadcrumb//====>*/
+.ipsBreadcrumb.ipsBreadcrumb_top,
+.ipsBreadcrumb.ipsBreadcrumb_bottom{
+  	margin: 0;
+	padding: 15px 20px 15px 20px;
+  	background-color: {theme="ipsBreadcrumb_bg"};
+	opacity: 1;
+}
+.ipsBreadcrumb > ul > li{
+	    font-size: 14px;
+}
+/*====\\TipsHr//====>*/
+.ipsApp.ipsApp_front hr.ipsHr {
+	height: 2px;
+  	border: none;
+  	background: rgba(0, 0, 0, 0.3);
+}
+/*====\\Image Box-Shadow//====>*/
+.ipsUserPhoto_small img,
+img.ipsUserPhoto_small,
+.ipsUserPhoto_tiny img,
+img.ipsUserPhoto_tiny,
+.ipsUserPhoto_tiny:after,
+.ipsUserPhoto_mini img,
+img.ipsUserPhoto_mini,
+.ipsUserPhoto_mini:after {
+	-webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+	box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+}
+.ipsUserPhoto {
+	border: 1px solid rgba(0, 0, 0, 0.01);
+	background: none;
+}
+/*====\\Progress bars.//====>*/
+.ipsProgressBar.ipsProgressBar_animated .ipsProgressBar_progress,
+.ipsProgressBar_progress,
+.ipsAttachment_progress > span{
+	background-color: {theme="progressbar_bg"};
+}
+.cPollVoteBar > span:after{
+  color: {theme="text_light"};
+}
+.ipsAttachment_progress {
+	border: 1px solid;
+}
+.cGallerySubmit_uploadImages .ipsAttachment_dropZone,
+#form_promote_media .ipsAttachment_dropZone.ipsAttachment_dropZoneSmall{
+	border-width: 2px;
+}
+.ipsAttachment_progress,
+.ipsAttachment_dropZone.ipsDragging,
+.ipsComposeArea_dropZone.ipsDragging,
+#form_promote_media .ipsAttachment_dropZone.ipsAttachment_dropZoneSmall{
+	border-color: {hextorgb="progressbar_bg" opacity="0.45"};
+}
+.cPollVoteBar,
+.ipsAttachment_progress{
+	background-color: {theme="area_background_light"};
+}
+/*====\\Loading animations.//====>*/
+@-webkit-keyframes dummy_anim {
+  0% { background-color: {theme="area_background_reset"}; }
+  50% { background-color: background-color: {hextorgb="area_background_reset" opacity="0.50"}; }
+  99% { background-color: {theme="area_background_reset"}; }
+}
+@-moz-keyframes dummy_anim {
+  0% { background-color: {theme="area_background_reset"}; }
+  50% { background-color: {hextorgb="area_background_reset" opacity="0.50"}; }
+  99% { background-color: {theme="area_background_reset"}; }
+}
+@-ms-keyframes dummy_anim {
+  0% { background-color: {theme="area_background_reset"}; }
+  50% { background-color: {hextorgb="area_background_reset" opacity="0.50"}; }
+  99% { background-color: {theme="area_background_reset"}; }
+}
+@-o-keyframes dummy_anim {
+  0% { background-color: {theme="area_background_reset"}; }
+  50% { background-color: {hextorgb="area_background_reset" opacity="0.50"}; }
+  99% { background-color: {theme="area_background_reset"}; }
+}
+@keyframes dummy_anim {
+  0% { background-color: {theme="area_background_reset"}; }
+  50% { background-color: {hextorgb="area_background_reset" opacity="0.50"}; }
+  99% { background-color: {theme="area_background_reset"}; }
+}
+/* POP UPS.
+/===========*/
+.ipsDialog_title,
+.ipsDialog_close{
+	color: {theme="ipsdialog_title"};
+}
+.ipsDialog .ipsDialog_title ~ .ipsHr {
+    margin: 15px 0;
+}
+.ipsHovercard {
+  	background: {theme="dialogbg"};
+  	border: 1px solid {theme="dialogbg"};
+}
+.ipsHovercard[data-role="advicePopup"].cStem_ltr .ipsHovercard_stem {
+	border-color: transparent {theme="dialogbg"} transparent transparent;
+}
+.ipsHovercard[data-role="advicePopup"].cStem_rtl .ipsHovercard_stem {
+	border-color: transparent transparent transparent {theme="dialogbg"};
+}
+.ipsHovercard[data-role="advicePopup"].cStem_above .ipsHovercard_stem {
+	border-color: {theme="dialogbg"} transparent transparent transparent;
+}
+.ipsApp.ipsApp_front .ipsDialog .ipsDialog_loading,
+.ipsTabs_panel,
+.ipsApp.ipsApp_front .ipsDialog > div,
+.ipsApp.ipsApp_front .ipsDialog .ipsDialog_loading,
+.ipsApp.ipsApp_front .ipsAlert{
+	background-color: {theme="dialogbg"};
+}
+.ipsHovercard_stemTop .ipsHovercard_stem {
+	border-color: {theme="dialogbg"} transparent transparent transparent;
+}
+.ipsHovercard_stemTop .ipsHovercard_stem:before {
+	border-color: {theme="dialogbg"} transparent transparent transparent;
+}
+.ipsHovercard_stemBottom .ipsHovercard_stem {
+	border-color: transparent transparent {theme="dialogbg"} transparent;
+}
+.ipsHovercard_stemBottom .ipsHovercard_stem:before {
+	border-color: transparent transparent {theme="dialogbg"} transparent;
+}
+
+/* Body.
+/=========*/
+.ipsLayout_container,
+#ipsLayout_mainArea,
+.ipsApp.ipsApp_front #ipsLayout_contentWrapper,
+.ipsApp.ipsApp_front #ipsLayout_contentArea
+{
+    position: relative;
+}
+.ipsApp.ipsApp_front #ipsLayout_contentArea {
+    background-color: {theme="area_background"};
+}
+html[dir="ltr"] #ipsLayout_mainArea {
+		padding-right: 10px;
+		padding-left: 20px;
+}
+html[dir="rtl"] #ipsLayout_mainArea {
+		padding-right: 20px;
+		padding-left: 10px;
+}
+html[dir="ltr"] #ipsLayout_sidebar.ipsLayout_sidebarleft,
+html[dir="rtl"] #ipsLayout_sidebar.ipsLayout_sidebarright {
+    padding-right: 0;
+    padding-left: 20px;
+}
+html[dir="ltr"] #ipsLayout_sidebar.ipsLayout_sidebarright,
+html[dir="rtl"] #ipsLayout_sidebar.ipsLayout_sidebarleft {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.cAuthorPane_photo .ipsUserPhoto, .ipsPhotoPanel .ipsUserPhoto, #elUserNav .ipsUserPhoto{
+	background-color: transparent;
+}
+/*====\\Sidebar manager & Widget controls.//====>*/
+html[dir="ltr"] #elWidgetControls{
+  border-radius: 0 15px 15px 0;
+  padding-left: 0;
+}
+html[dir="rtl"] #elWidgetControls{
+  border-radius: 15px 0 0 15px;
+  padding-right: 0;
+}
+.cWidgetContainer.cWidgetContainer_managing,
+.cSidebarBlock_managing{
+	background-color: {hextorgb="area_background_reset" opacity="0.10"};
+}
+.cWidgetContainer.cWidgetContainer_managing:before {
+	border: 1px dashed {hextorgb="primary_button" opacity="0.40"};
+}
+#elSidebarManager{
+    z-index: 9999;
+}
+#elSidebarManager .ipsType_light {
+    color: #999999;
+}
+/* Data List.
+/============*/
+.ipsDataItem,
+.ipsStream_snippetInfo {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+.cStreamFilter{
+	background: {theme="tab_background"};
+}
+.cStreamFilter > li > a{
+  background: {theme="tabs_buttonbg"};
+}
+.cStreamFilter h3,
+.cStreamFilter a {
+  	color: {theme="tabs_fontcolor"};
+}
+.cStreamFilter > li > a.cStreamFilter_active{
+	background: {theme="tabs_activebutton"};
+	color: {theme="tabs_actifocolor"};
+	-webkit-box-shadow: 0 0 10px {hextorgb="tabs_activebutton" opacity="0.87"};
+	-moz-box-shadow: 0 0 10px {hextorgb="tabs_activebutton" opacity="0.87"};
+	box-shadow: 0 0 10px {hextorgb="tabs_activebutton" opacity="0.87"};
+}
+.cStreamFilter > li > a.cStreamFilter_active,
+.cStreamFilter > li > a.cStreamFilter_active h3{
+	color: {theme="tabs_actifocolor"};
+}
+.cStreamFilter p em {
+	opacity: 0.9;
+}
+.ipsStream .ipsStreamItem_contentType {
+	background: {theme="area_background_light"};
+  color: {theme="timeline_color"};
+	-webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+	box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+}
+.ipsStreamItem.ipsStreamItem_contentBlock {
+	border-color: transparent;
+}
+html[dir="ltr"] .ipsStream_withTimeline .ipsStreamItem.ipsStreamItem_contentBlock:before {
+	border-color: transparent rgba(0,0,0,0.1) transparent transparent;
+	left: -24px;
+}
+html[dir="rtl"] .ipsStream_withTimeline .ipsStreamItem.ipsStreamItem_contentBlock:before {
+	border-color: transparent transparent transparent rgba(0,0,0,0.1);
+	right: -24px;
+}
+html[dir="ltr"] .ipsStream_withTimeline .ipsStreamItem:after {
+	left: -22px;
+	border-color: transparent {theme="area_background_reset"} transparent transparent;
+}
+html[dir="rtl"] .ipsStream_withTimeline .ipsStreamItem:after {
+	right: -22px;
+	border-color: transparent transparent transparent {theme="area_background_reset"};
+}
+html[dir="ltr"] .ipsStream_withTimeline .ipsStreamItem.ipsStreamItem_contentBlock.ipsModerated:before {
+	border-color: transparent rgba(0,0,0,0.1) transparent transparent;
+}
+html[dir="rtl"] .ipsStream_withTimeline .ipsStreamItem.ipsStreamItem_contentBlock.ipsModerated:before {
+	border-color: transparent transparent transparent rgba(0,0,0,0.1);
+}
+html[dir="ltr"] .ipsStream_withTimeline .ipsStreamItem.ipsModerated:after {
+	border-color: transparent {theme="moderated"} transparent transparent;
+}
+html[dir="rtl"] .ipsStream_withTimeline .ipsStreamItem.ipsModerated:after {
+	border-color: transparent transparent transparent {theme="moderated"};
+}
+.ipsStreamItem.ipsModerated .ipsStreamItem_contentType{
+	background: {theme="moderated"};
+}
+#elProfileActivityOverview .ipsStreamItem,
+#elUserContent .ipsStreamItem,
+#elSingleStatusUpdate .ipsStreamItem{
+	padding: 20px 10px;
+}
+#elProfileTabs_content > div{
+	padding: 10px;
+}
+/* Messages.
+/============*/
+/*====\\Data item messages//====>*/
+.ipsApp .ipsDataItem_new, .ipsApp .ipsDataItem_success { background-color: {theme="dataitem_new_success"}; }
+.ipsApp .ipsDataItem_info { background-color: {theme="dataitem_info"}; }
+.ipsApp .ipsDataItem_status { background-color: {theme="dataitem_status"}; }
+.ipsApp .ipsDataItem_warning { background-color: {theme="dataitem_warning"}; }
+.ipsApp .ipsDataItem_error,
+.ipsApp.ipsApp_front .ipsTable.ipsMatrix .ipsMatrix_error {
+  background-color: {theme="dataitem_error"};
+}
+.ipsDataList.ipsDataList_zebra .ipsDataItem:not( .ipsDataItem_selected ):not( .ipsModerated ):not( .ipsDataItem_new ):not( .ipsDataItem_success ):not( .ipsDataItem_warning ):not( .ipsDataItem_error ):not( .ipsDataItem_info ):not( .ipsDataItem_status ):nth-child(even) {
+  	background-color: {theme="dataitem_zebra"};
+}
+/*====\\Messages//====>*/
+.ipsMessage, #elSiteOffline, #elGuestTerms{ color: {theme="messages_font"}; }
+.ipsMessage_error, #elSiteOffline { background-color: {theme="messages_error"}; }
+.ipsMessage_success { background-color: {theme="messages_success"}; }
+.ipsMessage_warning { background-color: {theme="messages_warning"}; }
+.ipsMessage_info, .ipsMessage_information { background-color: {theme="messages_info"}; }
+.ipsMessage_general,.ipsComposeArea_editorPaste { background-color: {theme="messages_general"}; }
+#elGuestTerms { background: {theme="messages_general"}; }
+#elSiteOffline{
+	margin: 5px;
+  border-radius: 4px;
+}
+/*====\\Guest Terms Bar message//====>*/
+#elGuestTerms {
+	width: 500px;
+	bottom: 20px;
+	left: auto;
+	right: 25px;
+	padding: 7px 0;
+  	border-radius: 4px;
+	-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+#elGuestTerms .ipsGrid_span10,
+#elGuestTerms .ipsGrid_span2 {
+	width: 100%;
+	margin: 7px 0;
+	float: none;
+}
+body.cWithGuestTerms {
+	padding-bottom: 0;
+}
+/*====\\Flash Messages//====>*/
+#elFlashMessage {
+	background: {theme="flashmessage_bg" opacity="0.9"};
+}
+#elFlashMessage,
+#elFlashMessage a{
+	color: {hextorgb="flashmessage_font" opacity="0.85"};
+}
+#elFlashMessage .ipsType_light {
+	color: {hextorgb="flashmessage_font" opacity="0.65"};
+}
+#elFlashMessage a:hover {
+	color: {theme="flashmessage_font"};;
+}
+.ipsRichEmbed_openItem,
+#elFlashMessage a{
+	color: {theme="link"};
+}
+#elFlashMessage a:hover {
+	color: {theme="link_hover"};
+}
+/* Tags, Prefix.
+/===============*/
+.ipsTags .ipsTag,
+.ipsTag_prefix{
+	margin: 0 3px;
+}
+.ipsTags .ipsTag,
+.ipsTag_prefix,
+.ipsTag_remove{
+	font-size: 12px;
+	line-height: 19px;
+	height: 19px;
+	border-radius: 10px;
+	opacity: 0.8;
+}
+.ipsTags .ipsTag:before,
+.ipsTag_prefix:before,
+.ipsTags .ipsTag:after,
+.ipsTag_prefix:after{
+	display: none;
+}
+.ipsTags .ipsTag:hover,
+.ipsTag_remove:hover {
+    background: {theme="tag"};
+		opacity: 1;
+}
+.ipsTag_remove{
+    background: transparent;
+}
+html[dir="rtl"] .ipsTag_remove,
+html[dir="ltr"] .ipsTag_remove{
+	border-radius: 10px;
+}
+html[dir="rtl"] .ipsTag_remove{
+	left: 5px;
+}
+html[dir="ltr"] .ipsTag_remove{
+	right: 5px;
+}
+html[dir="ltr"] .ipsTags .ipsTag:hover:before {
+	border-color: transparent transparent {theme="tag"} {theme="tag"};
+}
+html[dir="rtl"] .ipsTags .ipsTag:hover:before {
+	border-color: {theme="tag"} {theme="tag"} transparent transparent;
+}
+
+/* Fixing ACP theme.
+/===================*/
+body.ipsApp.ipsApp_admin{
+	background-color: #fafafa;
+  	color: #353c41;
+}
+.ipsApp.ipsApp_admin .ipsBox:not( .ipsBox_transparent ):not( .ipsModerated ) {
+    background-color: #fff;
+}
+.ipsApp.ipsApp_admin .ipsBox:not( .ipsBox_transparent):not( .ipsModerated):not(.cForumMiniList_wrapper):not(.ipsPad):not(.ipsPad_half):not(.ipsPad_double), .ipsComment, .cPost.ipsBox:not( .ipsBox_transparent ):not( .ipsModerated ){
+	padding: 0
+}
+#ipsLayout_header{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.ipsApp.ipsApp_admin .ipsBox{
+	border: 1px solid #e0e0e0;
+    box-shadow: 0px 1px 0px rgba(0,0,0,0.1);
+    border-radius: 3px;
+    background: #fff;
+}
+
+.ipsApp.ipsApp_admin .ipsTabs_activeItem {
+	background: #fff;
+	color: #333;
+}
+.ipsApp.ipsApp_admin .ipsTabs_dummyItem {
+	background: #4e5b62;
+	color: #fff;
+}
+.ipsApp.ipsApp_admin .ipsTabs_panel {
+	height: 100%;
+	background: #fff;
+}
+.ipsApp.ipsApp_admin .ipsButtonRow li > a, .ipsButtonRow li > span{
+	background: rgba(255,255,255,0.1);
+	color: #fff !important;
+	font-weight: bold;
+}
+.ipsApp.ipsApp_admin .ipsDialog_title, .ipsApp.ipsApp_admin .ipsDialog_close{
+	color: #333;
+}
+.ipsApp.ipsApp_admin .ipsDialog_close,
+.ipsApp.ipsApp_admin .ipsType_sectionHead{
+	color: #000;
+}
+.ipsApp.ipsApp_admin .ipsFieldRow_content .ipsMessage{
+	width: 90%;
+}
+.ipsApp.ipsApp_admin .ipsAreaBackground_reset,
+.ipsApp.ipsApp_admin #ipsLayout_contentWrapper,
+.ipsApp.ipsApp_admin .ipsAlert{
+	background: #fff;
+}
+.ipsApp.ipsApp_admin .ipsAreaBackground_light,
+.ipsApp.ipsApp_admin .ipsStream_comment{
+	background: #F5F5F5;
+}
+.ipsApp.ipsApp_admin .ipsAreaBackground{
+	background: #EBEBEB;
+}
+.ipsApp.ipsApp_admin .area_background_dark{
+	background: #283A4A;
+}
+/* Disabling some default theme css properties
+/=============================================*/
+#elDownloadsSubmit .ipsAttachment_dropZone,
+.cBlogInfo_content:after,
+.cWidgetContainer,
+#elNexusActions > li > a:hover,
+.ipsItemStatus.ipsItemStatus_large,
+.ipsItemStatus.ipsItemStatus_large.ipsItemStatus_read,
+.ipsItemStatus.ipsItemStatus_large,
+#elUserNav #elRegisterButton,
+#ipsLayout_header header,
+.ipsWidget .ipsAttachment_progress
+{
+    background: none;
+}
+.ipsThumb_bg,
+.ipsThumb{
+	background-color: none;
+}
+#ipsLayout_header header{
+    padding: 0;
+    padding-bottom: 0;
+}
+
+#ipsLayout_header{
+	border-bottom: none;
+}
+.ipsApp .ipsButton_link,
+.ipsComment:not( .ipsModerated ) .ipsComment_header,
+.ipsMemberCard,
+.ipsApp.ipsApp_front .ipsMenu{
+	border: none;
+}
+.ipsThumb_bg,
+.ipsThumb{
+  border: none;
+}
+.ipsApp .ipsButton_link.ipsFollow:hover,
+.ipsApp .ipsButton_link.ipsPromote:hover{
+	background-image: none;
+}
+.ipsWidget .ipsAttachment_progress{
+	border: none;
+}
+*:focus,
+html[dir="ltr"] #elWidgetControls:focus,
+html[dir="rtl"] #elWidgetControls:focus{
+  outline: none;
+}
+/* Fonts.
+/===============*/
+body {
+	{{if theme.body_fontcustom}}
+  		font-family: "{theme="body_fontcustom"}", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	{{else}}
+		{{if !theme.body_font || theme.body_font == 'default'}}
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	{{else}}
+			font-family: "{theme="body_font"}", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		{{endif}}
+	{{endif}}
+}
+{{if theme.nav_fontcustom}}
+.ipsNavBar_primary > ul > li > a,
+.ipsNavBar_secondary > li > a,
+.ipsNavBar_primary .ipsMenu_item > a,
+.ipsNavBar_primary .ipsMenu_item > span,
+#elSiteTitle{
+  	font-family: "{theme="nav_fontcustom"}", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+{{endif}}
+/* Responsiveness.
+/================*/
+/*====\\Tablets//====>*/
+@media screen and (max-width: 979px) {
+  	.ta-Footer .links .ipsDataList a i,
+  	#ipsLayout_footer .slContainer,
+  	.cPost .ipsComment_content:before,
+  	.cForumList > .cForumRow > ol > li .ipsDataItem_icon .ipsItemStatus:after,
+  	.cForumList > ol > li .ipsDataItem_icon .ipsItemStatus:after {
+  		display: none;
+  	}
+	.footer-wrap .ta-Footer,
+	.footer-wrap #ipsLayout_footer {
+    	border: none;
+    }
+  	.footer-wrap .ta-Footer,
+  	.cWidgetContainer[data-widgetArea="header"],
+  	#ipsLayout_footer,
+  	.ipsPageHeader {
+  		margin: 0;
+  	}
+  	.ta-Footer .quicklinks > ul,
+  	.footer-wrap .ta-Footer .ipsColumns .ipsColumn_veryWide {
+   	 	width: 100%;
+  	}
+	.ta-Footer .about h3,
+  	.ta-Footer .quicklinks > ul,
+  	.ta-Footer .mArticles,
+  	.ta-Footer .about,
+  	.ta-Footer .socialLinks {
+  		text-align: center;
+ 	}
+	.ta-Footer .quicklinks > ul:not(:last-child) {
+	    padding-right: 0;
+	}
+  	.ta-customBlock{
+  		padding: 10px;
+  	}
+	html[dir="ltr"] #ipsLayout_mainArea,
+	html[dir="rtl"] #ipsLayout_mainArea,
+	html[dir="ltr"] #ipsLayout_sidebar.ipsLayout_sidebarleft,
+	html[dir="rtl"] #ipsLayout_sidebar.ipsLayout_sidebarright,
+  	html[dir="ltr"] #ipsLayout_sidebar.ipsLayout_sidebarright,
+	html[dir="rtl"] #ipsLayout_sidebar.ipsLayout_sidebarleft{
+    	padding-right: 10px;
+    	padding-left: 10px;
+	}
+  	.ipsDataItem_icon .ipsItemStatus.ipsItemStatus_large{
+  		font-size: 20px;
+  	}
+  	.ipsPageHeader {
+    	padding: 15px 0;
+  	}
+  	.ipsApp.ipsApp_front #ipsLayout_header header,
+  	#elMobileNav {
+        background-color: {theme="main_nav_bg"};
+	}
+  	#elMobileNav li:not( #elMobileBreadcrumb ) a,
+  	.ipsApp.ipsApp_front #elSiteTitle{
+  		color: {theme="main_nav_font"};
+  	}
+}
+/*====\\Mobile//====>*/
+@media screen and (max-width: 767px) {
+	.ipsWidget .ipsTabs_small .ipsTabs_item:not( .ipsTabs_activeItem ){
+		color: {theme="tabs_fontcolor"} !important;
+  	}
+  	.ipsWidget.ipsWidget_horizontal[data-blockid^="app_cms"]{
+      padding: 0 !important;
+  	}
+  	.ipsTabs {
+		border-top: none;
+		position: relative;
+	}
+  	.ta_tickerTitle{
+  		display: none;
+  	}
+  	.ipsTabs [data-action='expandTabs']{
+  		color: {theme="tabs_actifocolor"};
+  	}
+    .ipsTabs.ipsTabs_showMenu [data-action='expandTabs']{
+  		color: inherit;
+  	}
+	.cPost .cAuthorPane:before, .cPost .cAuthorPane:after {
+    	top: 0;
+    	bottom: 0;
+    	left: 0;
+    	right: 0;
+	}  
+		/*====\\//====>*/
+		.ipsSideMenu.ipsSideMenu_open .ipsSideMenu_title,
+		.ipsSideMenu:target .ipsSideMenu_title {
+    	background: {theme="ipsmenu_title_bg"};
+		}
+}
+/* END.
+/================*/

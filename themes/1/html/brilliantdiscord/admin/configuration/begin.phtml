@@ -1,0 +1,25 @@
+<ips:template parameters="" />
+<section class='ipsBox'>
+    {{if \IPS\Application::appIsEnabled('richdiscord') && \IPS\Application::load('richdiscord')->isConfigured()}} <!-- \IPS\Application::appIsEnabled('richdiscord') && \IPS\Application::load('richdiscord')->isConfigured() -->
+        {template="info" group="configuration" app="brilliantdiscord" params="\IPS\Member::loggedIn()->language()->addToStack('brilliantdiscord_configuration_richdiscord')"}
+    {{endif}}
+    <div class="ipsType_center ipsPad">
+    <br>
+    <i class='ipsType_huge fa fa-cogs'></i>
+    <h1 class='ipsType_veryLarge'>{lang="brilliantdiscord_configure"}</h1>
+    <p class='ipsType_large'>
+        {lang="brilliantdiscord_configure_description"}
+    </p>
+    <hr class="ipsHr">
+    <div>
+        {{if false}}
+        <!-- Coming soon (or never) -->
+        <a href="#" class="ipsButton ipsButton_positive ipsButton_veryLarge">{lang="brilliantdiscord_configure_start_wizard"}</a>
+        <span class="ipsType_large">
+            <span class="brdsOrSeparator">{lang="or"}</span>
+        </span>
+        {{endif}}
+        <a href="{url="app=brilliantdiscord&module=general&controller=configuration&do=advancedSetup&_new=1"}" class="ipsButton ipsButton_positive ipsButton_veryLarge">{lang="brilliantdiscord_configure_start_advanced"}</a>
+    </div>
+    </div>
+</section>

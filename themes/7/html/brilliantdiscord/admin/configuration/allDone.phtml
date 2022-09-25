@@ -1,0 +1,12 @@
+<ips:template parameters="$overridesOld = FALSE" />
+<section class='ipsType_center ipsPad ipsBox'>
+    <br>
+    <i class='ipsType_huge fa fa-check-circle'></i>
+    <h1 class='ipsType_veryLarge'>{lang="brilliantdiscord_all_done"}</h1>
+    <p class='ipsType_large'>
+        {lang="brilliantdiscord_all_done_desc"}
+        {{if $overridesOld}}
+            <br>{lang="brilliantdiscord_all_done_desc_overrides"}
+        {{endif}}
+    </p>
+</section>

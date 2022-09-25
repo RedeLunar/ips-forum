@@ -1,0 +1,18 @@
+<ips:template parameters="$orientation='vertical'" />
+{{$groups = \IPS\Member::loggedIn()->groupNameIndicator();}}
+{{if \count( $groups )}}
+	<hr class="ipsHr">
+	{{if $orientation == 'vertical'}}
+		<ul class='ipsList_inline'>
+			{{foreach $groups as $group}}
+				<li><a href='{url="app=core&module=search&controller=search&type=core_members&group[$group->g_id]=1&q= " seoTemplate="search"}'>{$group->formattedName|raw}</a></li>
+			{{endforeach}}
+		</ul>
+	{{else}}
+		<ul class='ipsList_inline'>
+			{{foreach $groups as $group}}
+				<li><a href='{url="app=core&module=search&controller=search&type=core_members&group[$group->g_id]=1&q= " seoTemplate="search"}'>{$group->formattedName|raw}</a></li>
+			{{endforeach}}
+		</ul>
+	{{endif}}
+{{endif}}

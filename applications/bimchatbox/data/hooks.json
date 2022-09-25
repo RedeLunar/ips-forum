@@ -1,0 +1,10 @@
+{
+    "hookJSCSS": {
+        "type": "C",
+        "class": "\\IPS\\Dispatcher\\Standard"
+    },
+    "Ignore": {
+        "type": "C",
+        "class": "\\IPS\\core\\Ignore"
+    }
+}

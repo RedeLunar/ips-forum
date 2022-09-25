@@ -1,0 +1,20 @@
+<ips:template parameters="$topics, $configuration, $orientation='vertical'" />
+{{if !empty( $topics ) }}
+<section id="recentTopicsWrapper" data-recenttopics-interval="{$configuration['recentTopics_interval']}" data-recenttopics-showloading="{$configuration['recentTopics_showLoading']}">
+	<ol class='ipsDataList ipsDataList_zebra' data-controller='core.global.core.table, forums.front.forum.forumList, core.front.widgets.recentTopics' data-baseURL=''>
+		<li data-categoryID='rt' class='cForumRow'>
+			<h2 class="ipsType_sectionTitle ipsType_reset ipsType_blendLinks cForumTitle">
+				<a href='#' class='ipsPos_right ipsJS_show cForumToggle' data-action='toggleCategory' data-ipsTooltip title='{lang="toggle_this_category"}'></a>
+				{lang="recentTopics_title"}
+			</h2>
+			<div class='ipsWidget_inner'>
+				<ul class='ipsDataList' id="recentTopicsOuter" data-role='forums'>
+					{{foreach $topics as $topic}}
+						{template="mdmxRecentTopicsRow" group="plugins" app="core" location="global" params="NULL, NULL, $topic, TRUE"}
+					{{endforeach}}
+				</ul>
+			</div>
+		</li>
+	</ol>
+</section>
+{{endif}}

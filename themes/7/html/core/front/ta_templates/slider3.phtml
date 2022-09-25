@@ -1,0 +1,17 @@
+<ips:template parameters="" />
+{{if theme.slider_3}}
+	{{if theme.slider_3_wcs =='*' or \IPS\Member::loggedIn()->inGroup( explode( ',', theme.slider_3_wcs ) )}}
+		<div class="swiper-slide slide-Custom-3">
+			{{if theme.slider_lazyloading}}<div class="Ta_lazyPreloader"><span></span><span></span><span></span></div>{{endif}}
+			<div class="swiper-lazy slide-bg" {{if theme.slider_3_img}}{{if theme.slider_lazyloading}}data-background="{theme="slider_3_img"}"{{else}}style="background-image: url({theme="slider_3_img"});"{{endif}}{{endif}}></div>
+			{{if theme.slider_enable_overlay || theme.slider_enablecoloroverlay}}<div class="slide-overlay"></div>{{endif}}
+			{{if theme.slider_3_content || theme.slider_3_title || theme.slider_3_buttons}}
+				<div class="slide-contents" {{if (in_array(theme.slider_effect, array('slide', 'fade')))}}data-swiper-parallax="-100%"{{endif}}>
+			  		<h4 class="ipsType_veryLarge" {{if (in_array(theme.slider_effect, array('slide', 'fade')))}}data-swiper-parallax="-55%"{{endif}}><span>{theme="slider_3_title"}</span></h4>
+			  		<section class='ipsType_normal ipsType_richText ipsType_break'>{theme="slider_3_content"}</section>
+					{theme="slider_3_buttons"}
+				</div>
+          {{endif}}
+		</div>
+	{{endif}}
+{{endif}}

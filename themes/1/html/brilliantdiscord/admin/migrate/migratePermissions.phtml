@@ -1,0 +1,20 @@
+<ips:template parameters="$field, $gname, $permissions" />
+<input type="hidden" name="{$field->name}" value='{expression="json_encode($permissions)" raw="true"}'>
+<div class="brdsGuildHelper" id="{$field->id}">
+    <header class="ipsAreaBackground">
+        <h2 class="ipsType_reset ipsType_large">{$gname}</h2>
+    </header>
+    <div id="brdsGuildsList">
+        {{if !$permissions}}
+            <div class='ipsPad'><span class='ipsType_light'>{lang="brilliantdiscord_guild_perms_ok"}</span></div>
+        {{else}}
+            <div class='ipsField_fieldList_content ipsPad_half'>
+                <ul>
+                    {{foreach $permissions as $perm}}
+                        <li class='brdsListFail'>{lang="brilliantdiscord_guild_missing_perm" sprintf="$perm"}</li>
+                    {{endforeach}}
+                </ul>
+            </div>
+        {{endif}}
+    </div>
+</div>

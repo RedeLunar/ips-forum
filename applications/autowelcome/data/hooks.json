@@ -1,0 +1,6 @@
+{
+    "validatehook": {
+        "type": "C",
+        "class": "\\IPS\\Member"
+    }
+}

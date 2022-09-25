@@ -1,0 +1,17 @@
+<ips:template parameters="$data" />
+<div>
+    <ul class='ipsDataList ipsDataList_reducedSpacing brdsAppInfo'>
+        <li class='ipsDataItem'>
+            <div class='ipsDataItem_generic ipsDataItem_size1'>
+                <img src="{{if $data["avatar"] == NULL}}{resource="default_photo.png" app="core" location="global"}{{else}}{$data["avatar"]|raw}{{endif}}" class="ipsUserPhoto ipsUserPhoto_small">
+            </div>
+            <div class='ipsDataItem_main'>
+                <p class='ipsType_normal ipsType_reset acpMemberView_integrations_text'>
+                    {$data['name']}<br>
+                    <span class='ipsType_medium ipsType_light'>{lang="brilliantdiscord_app_id" sprintf="$data['id']"}</span><br>
+                    <span class='ipsType_medium ipsType_light'>{lang="brilliantdiscord_app_owner" sprintf="$data['owner_tag']"}</span>
+                </p>
+            </div>
+        </li>
+    </ul>
+</div>

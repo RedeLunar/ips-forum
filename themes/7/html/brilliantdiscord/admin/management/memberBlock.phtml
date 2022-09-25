@@ -1,0 +1,69 @@
+<ips:template parameters="$member, $accountAccess, $guildMember, $links" />
+{{ $link = $member->discordLink(); }}
+{{ $handler = \IPS\Login\Handler::findMethod('IPS\brilliantdiscord\LoginHandler'); }}
+<div class='ipsBox ipsSpacer_bottom ipsSpacer_double'>
+    <h2 class='ipsBox_titleBar ipsType_reset'>
+        {lang="brilliantdiscord_member_info"}
+    </h2>
+    <div class='ipsPad ipsClearfix'>
+        {{if $link == NULL}}
+            <span class='ipsType_light'>{lang="brilliantdiscord_member_not_linked"}</span>
+        {{else}}
+            <h3 class="ipsType_minorHeading">{lang="brilliantdiscord_member_status"}</h3>
+            <ul class="ipsDataList ipsDataList_reducedSpacing">
+                <li class="ipsDataItem">
+                    <span class="ipsDataItem_generic ipsDataItem_size3 ipsType_break">
+                        <strong>{lang="brilliantdiscord_member_account_link"}</strong>
+                    </span>
+                    <div class="ipsDataItem_generic">
+                        {{if $accountAccess}}
+                            {lang="brilliantdiscord_member_account_ok"}
+                        {{else}}
+                            {lang="profilesync_reauth_needed"}
+                        {{endif}}
+                    </div>
+                </li>
+                <li class="ipsDataItem">
+                    <span class="ipsDataItem_generic ipsDataItem_size3 ipsType_break">
+                        <strong>{lang="brilliantdiscord_member_guild"}</strong>
+                    </span>
+                    <div class="ipsDataItem_generic">
+                        {{if $guildMember == NULL}}
+                            {lang="no"}
+                        {{else}}
+                            {lang="yes"}
+                        {{endif}}
+                    </div>
+                </li>
+            </ul>
+            <h3 class="ipsType_minorHeading">{lang="brilliantdiscord_member_actions"}</h3>
+            {{ $count = 0; }}
+            {{if member.hasAcpRestriction( 'core', 'members', 'member_edit' ) and (member.hasAcpRestriction( 'core', 'members', 'member_edit_admin' ) or !$member->isAdmin() )}}
+                {{if $guildMember}}
+                    {{ $count++; }}
+                    <a href='{$links["sync"]|raw}' class="ipsButton ipsButton_positive ipsButton_verySmall" data-ipsTooltip title='{lang="brilliantdiscord_member_sync"}'><i class="fa fa-refresh"></i></a>
+                {{endif}}
+                {{if $accountAccess}} {{$count++;}}
+                    {{if $guildMember == NULL}}
+                        <a href='{$links["force_join"]|raw}' class="ipsButton ipsButton_positive ipsButton_verySmall" data-ipsTooltip title='{lang="brilliantdiscord_member_force_join"}'><i class="fa fa-sign-in"></i></a>
+                    {{else}}
+                        <a href='{$links["kick"]|raw}' class="ipsButton ipsButton_negative ipsButton_verySmall" data-ipsTooltip title='{lang="brilliantdiscord_member_kick"}'><i class="fa fa-arrow-left"></i></a>
+                    {{endif}}
+                {{endif}}
+                {{if $member->discordApprovalNeeded()}} {{$count++;}}
+                    {{if \IPS\brilliantdiscord\Approval::access($member) != \IPS\brilliantdiscord\Approval::ACCESS_LIFETIME}}
+                        <a href='{$links["approve"]|raw}' class="ipsButton ipsButton_positive ipsButton_verySmall" data-ipsTooltip title='{lang="brilliantdiscord_member_approve"}'><i class="fa fa-check"></i></a>
+                    {{else}}
+                        <a href='{$links["disapprove"]|raw}' class="ipsButton ipsButton_negative ipsButton_verySmall" data-ipsTooltip title='{lang="brilliantdiscord_member_disapprove"}'><i class="fa fa-times"></i></a>
+                    {{endif}}
+                {{endif}}
+            {{endif}}
+            {{if $member->discordApprovalNeeded()}} {{$count++;}}
+                <a data-ipsDialog data-ipsDialog-title='{lang="brilliantdiscord_member_approval_logs"}' href='{$links["logs"]|raw}' class="ipsButton ipsButton_normal ipsButton_verySmall" data-ipsTooltip title='{lang="brilliantdiscord_member_approval_logs"}'><i class="fa fa-list"></i></a>
+            {{endif}}
+            {{if !$count}}
+                <em class="ipsType_light">{lang="brilliantdiscord_member_no_actions"}</em>
+            {{endif}}
+        {{endif}}
+    </div>
+</div>

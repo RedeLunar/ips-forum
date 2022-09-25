@@ -1,0 +1,50 @@
+<ips:template parameters="$users, $onlineCount, $orientation='vertical'" />
+{{if $orientation == 'vertical'}}
+    {{foreach $users as $user}}
+        {{if $user->member()->isOnline()}}
+            <li class='ipsDataItem {{if $orientation == 'horizontal'}}ipsGrid_span3{{endif}}'>
+                <div class='ipsDataItem_icon ipsPos_top'>
+                    {template="userPhoto" app="core" group="global" params="$user->member(), 'tiny'"}
+                </div>
+                <div class="ipsDataItem_main">
+                    <h3 class='ipsType_sectionHead'>{{if \IPS\Member::loggedIn()->language()->checkKeyExists( "core_staff_directory_name_{$user->id}" )}}<a href='{$user->member()->url()}'>{lang="core_staff_directory_name_{$user->id}"}</a>{{else}}{$user->member()->link()|raw}{{endif}}</h3>
+                    <p class='ipsType_reset ipsType_normal ipsType_light'>
+                         {expression="\IPS\Member\Group::load( $user->member()->member_group_id )->formattedName" raw="true"}
+                         <span class="ipsPos_right">
+                             {{if !member.members_disable_pm AND !$user->member()->members_disable_pm}}
+                                  <a href='{url="app=core&module=messaging&controller=messenger&do=compose&to={$user->member()->member_id}" seoTemplate="messenger_compose"}' data-ipsDialog data-ipsDialog-title='{lang="compose_new"}' data-ipsDialog-forceReload data-ipsDialog-remoteSubmit data-ipsDialog-flashMessage="{lang="message_sent"}"><i class='fa fa-envelope'></i> </a>
+                             {{endif}}
+                         </span>
+                    </p>
+                </div>
+            </li>
+        {{endif}}
+    {{endforeach}}
+{{else}}
+    {{foreach $users as $user}}
+        <div class='ipsGrid_span3'>
+            {{if $user->member()->isOnline()}}
+                <div class='ipsDataItem_icon ipsPos_top'>
+                    {template="userPhoto" app="core" group="global" params="$user->member(), 'tiny'"}
+                </div>
+                <div class="ipsDataItem_main">
+                    <h3 class='ipsType_sectionHead'>{{if \IPS\Member::loggedIn()->language()->checkKeyExists( "core_staff_directory_name_{$user->id}" )}}<a href='{$user->member()->url()}'>{lang="core_staff_directory_name_{$user->id}"}</a>{{else}}{$user->member()->link()|raw}{{endif}}</h3>
+                    <p class='ipsType_reset ipsType_normal ipsType_light'>
+                        {expression="\IPS\Member\Group::load( $user->member()->member_group_id )->formattedName" raw="true"}
+                        <span class="ipsPos_right">
+                            {{if !member.members_disable_pm AND !$user->member()->members_disable_pm}}
+                                <a href='{url="app=core&module=messaging&controller=messenger&do=compose&to={$user->member()->member_id}" seoTemplate="messenger_compose"}' data-ipsDialog data-ipsDialog-title='{lang="compose_new"}' data-ipsDialog-forceReload data-ipsDialog-remoteSubmit data-ipsDialog-flashMessage="{lang="message_sent"}"><i class='fa fa-envelope'></i> </a>
+                            {{endif}}
+                        </span>
+                    </p>
+                 </div>
+            {{endif}}
+        </div>
+     {{endforeach}}
+{{endif}}
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+.ipsType_light {
+	color: #24292e;
+}a {
+	color: #00080D;
+}a:hover {
+	color: #1C1A1A;
+}#ipsLayout_footer a, #ipsLayout_footer p {
+	color: #333843;
+}.ipsNavBar_primary > ul > li.ipsNavBar_active > a, .ipsNavBar_secondary > li > a, .ipsNavBar_secondary > li > a:hover, .ipsNavBar_secondary > li.ipsNavBar_active a {
+	color: #333843;
+}#elMobileBreadcrumb a {
+	color: #3b3b3b;
+}a.ipsType_sectionTitle, .ipsType_sectionTitle a {
+	color: #262222;
+}.ipsWidget.ipsWidget_vertical .ipsWidget_title {
+	color: #1cb2ff;
+}

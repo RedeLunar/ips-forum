@@ -1,0 +1,7 @@
+<ips:template parameters="$member, $mf" />
+<a href='{$mf($member->member_id)|raw}' target='_blank'>
+    <div class="ipsUserPhoto ipsUserPhoto_tiny">
+        <img src='{$member->photo}' alt='' referrerpolicy='origin-when-cross-origin'>
+    </div>
+    &nbsp;&nbsp;{$member->name}
+</a>

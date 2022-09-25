@@ -1,0 +1,86 @@
+<ips:template parameters="" />
+<script type="text/javascript" src="{resource="custom/ta-library-1.0.6.js" app="core" location="front"}"></script>
+{{if theme.entmt_snowfall}}
+<script type="text/javascript" src="{resource="custom/ta.entmt.1.0.js" app="core" location="front"}"></script>
+<script type="text/javascript">     
+$(document).ready(function(){
+	$(document).snowfall({flakeCount : 150, round : true, maxSpeed : 5, maxSize : 4});
+});
+</script>
+{{endif}}
+{{if theme.navbar_toggleNav !== 'none'}}
+<script type="text/javascript">
+;( function($, _, undefined){
+    "use strict";
+    ips.controller.register('toggleNav', {
+        initialize: function () {
+          this.on( 'click', this.toggleMenu);
+        },
+        toggleMenu: function (e) {
+    			if( $('.ta_Wrapper').hasClass('toggleAct') ){
+    				ips.utils.cookie.unset('tatoggleMenu');
+
+    			} else {
+    				ips.utils.cookie.set('tatoggleMenu', true, true);
+    			}
+				$('.ta_Wrapper').toggleClass('toggleAct').delay(400).queue(function(){
+					if ( null !== document.querySelector(".ta_SNcontainer") ) {
+						var mySwiper = document.querySelector('.swiper-container').swiper
+						mySwiper.update();
+					}
+					$(this).dequeue();
+
+				});
+    		}
+	});
+}(jQuery, _));
+</script>
+{{endif}}
+{{if theme.enable_slider == '1'}}
+<script type="text/javascript">
+var swiper = new Swiper('.swiper-container', {
+  {{if theme.slider_lazyloading}}
+  	preloadImages: false,
+  		lazy: {
+    	loadPrevNext: true,
+    	preloaderClass: 'Ta_lazyPreloader',
+  	},
+  {{endif}}
+  {{if !theme.slider_swiping}}
+  	noSwiping: true,
+  	noSwipingClass: 'swiper-container',
+  {{endif}}
+  parallax: true,
+  effect: {{if theme.slider_effect == 'slide'}}'slide'{{elseif theme.slider_effect == 'fade'}}'fade'{{elseif theme.slider_effect == 'cube'}}'cube'{{elseif theme.slider_effect == 'coverflow'}}'coverflow'{{elseif theme.slider_effect == 'flip'}}'flip'{{endif}},
+  {{if theme.slider_loop}}loop: true,{{endif}}
+  {{if theme.slider_enable_autoplay}}
+  autoplay: {
+    delay: {theme="slider_autoplay_delay"},
+  },
+  {{endif}}
+  {{if theme.slider_enable_pagination}}
+    pagination: {
+      el: '.swiper-pagination',
+        dynamicBullets: true,
+    },
+  {{endif}}
+  {{if theme.slider_navigation_buttons}}
+    navigation: {
+    nextEl: '.swiper-next',
+    prevEl: '.swiper-prev',
+    },
+  {{endif}}
+});
+</script>
+{{endif}}
+{{if theme.nt_toggle == 1}}
+<script type="text/javascript">
+if (null !== document.querySelector(".ta_themeNT #ta_webticker") ) {
+  $(".ta_themeNT #ta_webticker").webTicker({
+    height: '30px',
+  	speed: {theme="nt_speed"},
+  	hoverpause: true
+  });
+}
+</script>
+{{endif}}

@@ -1,0 +1,19 @@
+.brdsInvite .ipsOnlineStatus_online {
+    margin-right: 10px;
+}
+
+.brdsInvite .brdsInvite_guildIconPlaceholder {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #2f2f2f;
+    line-height: 90px;
+    font-size: 28px;
+    color: #fff;
+    font-weight: 100;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

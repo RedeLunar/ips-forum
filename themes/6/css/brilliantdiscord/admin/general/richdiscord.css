@@ -1,0 +1,16 @@
+.brdsAppInfo .ipsDataItem_main {
+    vertical-align: middle !important;
+}
+
+html[dir="ltr"] .brdsAppInfo .ipsDataItem_main > p {
+    padding-left: 10px;
+}
+
+html[dir="rtl"] .brdsAppInfo .ipsDataItem_main > p {
+    padding-right: 10px;
+}
+
+#form_brilliantdiscord_migrate_app_info .ipsFieldRow_content {
+    padding-top: 0;
+    padding-bottom: 0;
+}

@@ -1,0 +1,23 @@
+<ips:template parameters="$log" />
+<div class="ipsPad">
+    <div class="ipsSpacer_bottom">
+        <h3 class="ipsType_minorHeading">{lang="brilliantdiscord_log_details_rescontent"}</h3>
+        <textarea rows="8" style="font-family: monospace;" readonly>{$log['request_data']['content']}</textarea>
+    </div>
+    <div class="ipsSpacer_bottom">
+        <h3 class="ipsType_minorHeading">{lang="brilliantdiscord_log_details_reqdata"}</h3>
+        <textarea rows="8" style="font-family: monospace;" readonly>{$log['request_data']['req_data']}</textarea>
+    </div>
+    <div class="ipsSpacer_bottom">
+        <h3 class="ipsType_minorHeading">{lang="brilliantdiscord_log_details_reqhead"}</h3>
+        <textarea rows="8" style="font-family: monospace;" readonly>{{foreach $log['request_data']['req_head'] as $k=>$v}}{$k}: {$v}{expression="PHP_EOL"}{{endforeach}}</textarea>
+    </div>
+    <div class="ipsSpacer_bottom">
+        <h3 class="ipsType_minorHeading">{lang="brilliantdiscord_log_details_reshead"}</h3>
+        <textarea rows="8" style="font-family: monospace;" readonly>{{foreach $log['request_data']['res_head'] as $k=>$v}}{$k}: {$v}{expression="PHP_EOL"}{{endforeach}}</textarea>
+    </div>
+    <div class="ipsSpacer_bottom">
+        <h3 class="ipsType_minorHeading">{lang="brilliantdiscord_log_details_trace"}</h3>
+        <textarea rows="8" style="font-family: monospace;" readonly>{$log['trace']}</textarea>
+    </div>
+</div>

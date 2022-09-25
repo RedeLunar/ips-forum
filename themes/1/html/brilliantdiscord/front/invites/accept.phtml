@@ -1,0 +1,52 @@
+<ips:template parameters="$invite, $url, $handler, $data, $loginUrl, $registerUrl, $requestApproval, $approvalRequested" />
+{{ $link = $handler->link(); }}
+{{ $name = NULL; try { $name = $handler->userProfileName(\IPS\Member::loggedIn()); } catch ( \IPS\Login\Exception $e ) { $link = NULL; } }}
+<div class="ipsBox brdsInvite" data-controller="core.global.core.framebust">
+    <div class="ipsPad ipsType_center">
+        <h1 class='ipsType_minorHeading ipsSpacer_bottom ipsSpacer_double'>{lang="brilliantdiscord_invite_heading" sprintf="\IPS\Settings::i()->board_name"}</h1>
+        <span class='ipsUserPhoto ipsUserPhoto_large ipsSpacer_bottom ipsSpacer_double ipsCursor_default'>
+            {{if $data['avatar'] != NULL}}
+                <img alt='{lang="brilliantdiscord_server_icon"}' src='{$data["avatar"]|raw}'>
+            {{else}}
+                <div class="brdsInvite_guildIconPlaceholder" alt='{lang="brilliantdiscord_server_icon"}'>{$data['letters']}</div>
+            {{endif}}
+        </span>
+        <div>
+            <strong class='ipsOnlineStatus ipsOnlineStatus_online'><i class='fa fa-circle'></i> {lang="brilliantdiscord_members_online" sprintf="$data['online']"}</strong>
+            <strong class='ipsOnlineStatus ipsOnlineStatus_offline'><i class='fa fa-circle'></i> {lang="brilliantdiscord_members_overall" sprintf="$data['overall']"}</strong>
+        </div>
+        <h1 class='ipsType_veryLarge ipsType_center'>{$data['name']}</h1>
+        <h2 class='ipsType_minorHeading'>{{if $invite->expiration == -1}}{lang="brilliantdiscord_invite_expires_never"}{{else}}{lang="brilliantdiscord_invite_expires_in" sprintf="\IPS\DateTime::formatInterval(\IPS\DateTime::ts($invite->expiration)->diff(\IPS\DateTime::create()))"}{{endif}}</h2>
+    </div>
+    <form action="{$url}" method="post">
+        <input type="hidden" name="csrfKey" value="{expression="\IPS\Session::i()->csrfKey"}">
+        <div class="ipsAreaBackground ipsPad ipsType_center">
+            {{if !member.member_id}}
+                <span class="ipsType_light">{lang="brilliantdiscord_invite_guest_message" sprintf="$loginUrl, $registerUrl"}</span>
+            {{elseif !$invite->canView()}}
+                <span class="ipsType_light">{lang="brilliantdiscord_invite_use_noperm"}</span>
+            {{elseif member.discordMember() != NULL}}
+                <span class="ipsType_light">{lang="brilliantdiscord_invite_already_member"}</span>
+            {{elseif $approvalRequested}}
+                <span class="ipsType_light">{lang="brilliantdiscord_invite_waiting"}</span>
+            {{else}}
+                <a href='{setting="base_url"}' class="ipsButton ipsButton_link">{lang="cancel"}</a>
+                <button type="submit" class="ipsButton ipsButton_primary">
+                    {{if $requestApproval}}
+                        {{if $link == NULL}}
+                            {lang="brilliantdiscord_request_approval_unlinked"}
+                        {{else}}
+                            {lang="brilliantdiscord_request_approval" sprintf="$name"}
+                        {{endif}}
+                    {{elseif $link == NULL}}
+                        {lang="brilliantdiscord_invite_accept_unlinked"}
+                    {{else}}
+                        {lang="brilliantdiscord_invite_accept" sprintf="$name"}
+                    {{endif}}</button>
+                {{if $link == NULL}}
+                    <div class="ipsSpacer_top"><span class="ipsType_light">{lang="brilliantdiscord_info_account_link"}</span></div>
+                {{endif}}
+            {{endif}}
+        </div>
+    </form>
+</div>

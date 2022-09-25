@@ -1,0 +1,17 @@
+<ips:template parameters="" />
+{{if theme.nt_whocansee =='*' || \IPS\Member::loggedIn()->inGroup( explode( ',', theme.nt_whocansee ) )}}
+<div class="ta_themeNT{{if theme.nt_hidemobile == 1}} ipsResponsive_hidePhone{{endif}}">
+	<div class="newsTicker">
+    {{if theme.nt_title}}<div class="ta_tickerTitle"><span>{theme="nt_title"}</span></div>{{endif}}
+			<ul id="ta_webticker">
+				{{if theme.nt_custom_content}}{theme="nt_custom_content"}{{endif}}
+              	{{if !empty(theme.nt_tickers)}}
+					{{foreach explode(',', theme.nt_tickers) as $ticker}}
+						<li>{$ticker}</li>
+					{{endforeach}}
+				{{endif}}
+				{{if theme.nt_pages_content == 1}}{block="TA_themes_Pages_NewsTicker"}{{endif}}
+		</ul>
+	</div>
+</div>
+{{endif}}

@@ -1,0 +1,26 @@
+<ips:template parameters="$groups, $userIsStaff=FALSE, $onlineCount, $orientation='vertical'" />
+{{if !empty( $onlineCount ) }}
+    <h3 class='ipsType_reset ipsWidget_title'>{lang="block_staffOnline"}</h3>
+    <div class='ipsWidget_inner'>
+        {{if $orientation == 'vertical'}}
+        <div class='ipsPad_half ipsBox'>
+            <ul class='ipsDataList ipsDataList_reducedSpacing'>
+                {{foreach $groups as $group}}
+                    {{if count( $group->members() )}}
+                        {template="staffMembers" group="plugins" location="global" app="core" params="$group->members(), $onlineCount, $orientation='vertical'"}
+                    {{endif}}
+                {{endforeach}}
+            </ul>
+        </div>
+        {{else}}
+        <div class='ipsGrid ipsGrid_collapsePhone'>
+            {{foreach $groups as $group}}
+                {{if count( $group->members() )}}
+                    {template="staffMembers" group="plugins" location="global" app="core" params="$group->members(), $onlineCount, $orientation"}
+                {{endif}}
+            {{endforeach}}
+        </div>
+        {{endif}}
+    </div>
+{{endif}}
+

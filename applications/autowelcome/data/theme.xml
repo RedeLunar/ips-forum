@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme name="Default" author_name="Invision Power Services, Inc" author_url="https://www.invisioncommunity.com">
+ <template template_group="global" template_name="topic" template_data="$member" template_location="global" template_app="autowelcome">{lang=&quot;aw_topic_message_value&quot;}</template>
+</theme>

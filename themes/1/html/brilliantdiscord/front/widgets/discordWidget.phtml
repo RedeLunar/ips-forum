@@ -1,0 +1,10 @@
+<ips:template parameters="$url, $inviteUrl=NULL" />
+<div class="ipsType_center">
+    {{if $inviteUrl == NULL}}
+        <img class="ipsImage" src="{$url|raw}" alt='{lang="brilliantdiscord_widget"}'>
+    {{else}}
+        <a href="{$inviteUrl|raw}" rel="nofollow">
+            <img class="ipsImage" src="{$url|raw}" alt='{lang="brilliantdiscord_widget"}'>
+        </a>
+    {{endif}}
+</div>

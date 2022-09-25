@@ -1,0 +1,21 @@
+<ips:template parameters="$data" />
+{{if $data['error'] == NULL}}
+<div class="ipsMessage ipsMessage_success" style="margin: 15px">
+    {lang="brilliantdiscord_status_ok"}
+</div>
+{{else}}
+<div class="ipsMessage ipsMessage_error" style="margin: 15px">
+    <b>{lang="brilliantdiscord_status_found_problems"}</b>
+    <br>
+    {{if $data['error'] == 'generic'}}
+        {lang="brilliantdiscord_status_bad_token"}
+    {{elseif $data['error'] == 'badtoken'}}
+        {lang="brilliantdiscord_status_bad_token"}
+    {{elseif $data['error'] == 'glost'}}
+        {lang="brilliantdiscord_status_guild_lost"}
+    {{elseif $data['error'] == 'perms'}}
+    {{$permsMissing = '<ul><li>' . implode('</li><li>', $data['missingPerms']) . '</li></ul>';}}
+        {lang="brilliantdiscord_error_permissions" htmlsprintf="$permsMissing"}
+    {{endif}}
+</div>
+{{endif}}

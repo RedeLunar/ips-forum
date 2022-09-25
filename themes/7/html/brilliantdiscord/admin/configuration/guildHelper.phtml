@@ -1,0 +1,26 @@
+<ips:template parameters="$field, $exchangeURL='', $addURL='', $selected='-1'" />
+<input type="hidden" name="{$field->name}" value="__EMPTY">
+<div class="brdsGuildHelper" data-selected="{$selected}" data-controller="brilliantdiscord.admin.config.guildHelper" data-field-name="{$field->name}" data-exchange-url="{$exchangeURL|raw}" id="{$field->id}">
+    <header class="ipsAreaBackground">
+        <h2 class="ipsType_reset ipsType_large">{lang="brilliantdiscord_guilds_select"}</h2>
+        <div class="ipsPos_right">
+            <ul class='ipsButton_split'>
+                <li>
+                    <a data-action="refreshGuilds" class='ipsButton ipsButton_verySmall ipsButton_link'>
+                        <i class="fa fa-refresh"></i>
+                        <span class="ipsResponsive_hidePhone ipsResponsive_hideTablet">&nbsp;{lang="brilliantdiscord_guilds_refresh"}</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="{$addURL|raw}" class='ipsButton ipsButton_verySmall ipsButton_primary'>
+                        <i class="fa fa-plus"></i>
+                        <span class="ipsResponsive_hidePhone ipsResponsive_hideTablet">&nbsp;{lang="brilliantdiscord_guilds_add"}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div id="brdsGuildsList">
+
+    </div>
+</div>

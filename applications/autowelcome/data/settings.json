@@ -1,0 +1,102 @@
+[
+    {
+        "key": "aw_chat_author",
+        "default": ""
+    },
+    {
+        "key": "aw_chat_enable",
+        "default": "0"
+    },
+    {
+        "key": "aw_email_from",
+        "default": ""
+    },
+    {
+        "key": "aw_email_message",
+        "default": ""
+    },
+    {
+        "key": "aw_email_subject",
+        "default": ""
+    },
+    {
+        "key": "aw_enable_email",
+        "default": "1"
+    },
+    {
+        "key": "aw_enable_pm",
+        "default": "1"
+    },
+    {
+        "key": "aw_enable_topic",
+        "default": "1"
+    },
+    {
+        "key": "aw_pm_from",
+        "default": ""
+    },
+    {
+        "key": "aw_pm_message",
+        "default": ""
+    },
+    {
+        "key": "aw_pm_subject",
+        "default": ""
+    },
+    {
+        "key": "aw_pm_system",
+        "default": "1"
+    },
+    {
+        "key": "aw_post_reply",
+        "default": ""
+    },
+    {
+        "key": "aw_skip_validating",
+        "default": "1"
+    },
+    {
+        "key": "aw_status_author",
+        "default": ""
+    },
+    {
+        "key": "aw_status_enable",
+        "default": "1"
+    },
+    {
+        "key": "aw_topic_author",
+        "default": ""
+    },
+    {
+        "key": "aw_topic_forum",
+        "default": ""
+    },
+    {
+        "key": "aw_topic_message",
+        "default": ""
+    },
+    {
+        "key": "aw_topic_own",
+        "default": ""
+    },
+    {
+        "key": "aw_topic_settings",
+        "default": ""
+    },
+    {
+        "key": "aw_topic_title",
+        "default": ""
+    },
+    {
+        "key": "aw_welcome_delay",
+        "default": "0"
+    },
+    {
+        "key": "aw_welcome_groups",
+        "default": "*"
+    },
+    {
+        "key": "aw_welcome_topic",
+        "default": ""
+    }
+]

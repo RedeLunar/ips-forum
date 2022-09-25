@@ -1,0 +1,26 @@
+{
+    "awardsSettingsForm": {
+        "type": "C",
+        "class": "\\IPS\\core\\modules\\front\\system\\settings"
+    },
+    "awardsProfile": {
+        "type": "S",
+        "class": "\\IPS\\Theme\\class_core_front_profile"
+    },
+    "awardsGet": {
+        "type": "C",
+        "class": "\\IPS\\Member"
+    },
+    "awardsCSS": {
+        "type": "S",
+        "class": "\\IPS\\Theme\\class_core_global_global"
+    },
+    "awardsPosts": {
+        "type": "S",
+        "class": "\\IPS\\Theme\\class_forums_front_topics"
+    },
+    "awardsSettings": {
+        "type": "S",
+        "class": "\\IPS\\Theme\\class_core_front_system"
+    }
+}

@@ -1,0 +1,14 @@
+<ips:template parameters="$exception" />
+<div class='ipsBox ipsSpacer_bottom ipsSpacer_double'>
+    <h2 class='ipsBox_titleBar ipsType_reset'>
+        {lang="brilliantdiscord_member_info"}
+    </h2>
+    <div class="ipsPad ipsClearfix ipsType_center">
+        <div class="ipsSpacer_bottom ipsSpacer_half ipsType_light ipsType_veryLarge">
+            <i class="fa fa-warning"></i>
+        </div>
+        <span class="ipsType_normal ipsType_light">
+            {lang="brilliantdiscord_member_ratelimit_err" sprintf="$exception->timeLeft()"}
+        </span>
+    </div>
+</div>

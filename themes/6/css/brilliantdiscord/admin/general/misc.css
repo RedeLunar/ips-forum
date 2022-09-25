@@ -1,0 +1,67 @@
+li.brdsListSuccess {
+    color: #4A7C20;
+}
+li.brdsListSuccess:before {
+    font-family: 'FontAwesome';
+    content: '\f00c';
+    margin:0 8px 0 -24px;
+}
+
+li.brdsListFail {
+    color: #A52638;
+}
+li.brdsListFail:before {
+    font-family: 'FontAwesome';
+    content: '\f057';
+    margin:0 9px 0 -23px;
+}
+
+.brdsGuildHelper > header {
+    padding: 10px 15px;
+}
+.brdsGuildHelper > header > h2[class] {
+    line-height: 30px;
+    display: inline-block;
+}
+
+.brdsGuildHelper_dummy {
+    height: 100px;
+}
+
+#brdsGuildsList .ipsCustomInput {
+    line-height: 25px;
+}
+#brdsGuildsList h2 {
+    margin-left: 5px;
+    display: inline-block;
+}
+
+#brdsGuildsList .ipsField_fieldList_content {
+    margin: 5px;
+    margin-bottom: 0;
+}
+
+#brdsGuildsList ul {
+    list-style-type: none;
+    padding-left: 45px;
+}
+
+.brdsMessageFieldSize {
+    min-height: 200px;
+}
+
+html[dir="ltr"] .brdsMigrateSummary {
+    text-align: left;
+}
+
+html[dir="rtl"] .brdsMigrateSummary {
+    text-align: right;
+}
+
+.brdsMigrateSummary {
+    display: inline-block;
+}
+
+.brdsMigrateSummary {
+    padding: 0;
+}

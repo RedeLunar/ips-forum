@@ -1,0 +1,16 @@
+<ips:template parameters="$textarea, $tags" />
+<div class="ipsColumns ipsColumns_collapsePhone ipsColumns_collapseTablet" data-role="patchworkItem">
+    <div class="ipsGrid_span1944 ipsColumn ipsColumn_fluid">{$textarea|raw}</div>
+    <div class="ipsGrid_span1944 ipsColumn_medium ipsColumn ipsAreaBackground_light ipsComposeArea_sidebar ipsComposeArea_sidebarOpen">
+        <h3 class='ipsAreaBackground ipsPad_half ipsType_reset'>{lang="brilliantdiscord_notifiacations_form_tags"}</h3>
+        <span class='ipsType_light'>{lang="brilliantdiscord_notifications_form_tags_info"}</span>
+        <ul class="ipsList_reset ipsScrollbar brdsTagsList">
+            {{foreach $tags as $tag}}
+                <li class="ipsPad_half">
+                    <label>%{$tag}%</label>
+                    <div class="ipsType_light ipsType_small">{lang="brilliantdiscord_form_tag_$tag"}</div>
+                </li>
+            {{endforeach}}
+        </ul>
+    </div>
+</div>

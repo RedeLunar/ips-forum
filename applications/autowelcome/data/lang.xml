@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language>
+ <app key="autowelcome" version="100106">
+  <word key="__app_autowelcome" js="0">Auto Welcome</word>
+  <word key="menu__autowelcome_settings" js="0">Auto Welcome</word>
+  <word key="menu__autowelcome_settings_settings" js="0">Settings</word>
+  <word key="emailtpl_welcomeEmail" js="0">New Member Welcome</word>
+  <word key="task__welcomeAlerts" js="0">Sends welcome alerts if using time delay.</word>
+  <word key="aw_pm_settings" js="0">Personal Message</word>
+  <word key="aw_email_settings" js="0">Email</word>
+  <word key="aw_topic_settings_header" js="0">Topic</word>
+  <word key="aw_enable_pm" js="0">Send PM?</word>
+  <word key="aw_enable_pm_desc" js="0">Send personal message to new members?</word>
+  <word key="aw_pm_subject" js="0">Subject</word>
+  <word key="aw_pm_subject_desc" js="0">Enter the subject of the personal message.</word>
+  <word key="aw_pm_from" js="0">Sender</word>
+  <word key="aw_pm_from_desc" js="0">Create an account just for personal messages to avoid your inbox from being filled up.</word>
+  <word key="aw_pm_message" js="0">Message</word>
+  <word key="aw_pm_message_desc" js="0">Enter the message contents of the personal message.</word>
+  <word key="aw_enable_email" js="0">Send email?</word>
+  <word key="aw_enable_email_desc" js="0">Send email to new members?</word>
+  <word key="aw_email_subject" js="0">Subject</word>
+  <word key="aw_email_subject_desc" js="0"><![CDATA[Enter the subject of the email. <strong>Quick tags will not work here.</strong>]]></word>
+  <word key="aw_email_from" js="0">Sender</word>
+  <word key="aw_email_from_desc" js="0">Leave empty to use board email.</word>
+  <word key="aw_email_message" js="0">Message</word>
+  <word key="aw_email_message_desc" js="0">Enter the message contents of the email.</word>
+  <word key="aw_enable_topic" js="0">Create topic?</word>
+  <word key="aw_enable_topic_desc" js="0">Create topic for new members?</word>
+  <word key="aw_post_reply" js="0">Add post reply</word>
+  <word key="aw_post_reply_desc" js="0">Add a post reply instead of new topic?</word>
+  <word key="aw_pin_topic" js="0">Pin topic</word>
+  <word key="aw_close_topic" js="0">Close topic</word>
+  <word key="aw_topic_author" js="0">Topic/Post Author</word>
+  <word key="aw_topic_author_desc" js="0">Enter the display name of the topic/post author.</word>
+  <word key="aw_topic_title" js="0">Topic Title</word>
+  <word key="aw_topic_title_desc" js="0">Enter the title of the topic.</word>
+  <word key="aw_topic_forum" js="0">Topic Forum</word>
+  <word key="aw_topic_forum_desc" js="0">Select which forum the topic will be posted in.</word>
+  <word key="aw_topic_settings" js="0">Topic Settings</word>
+  <word key="aw_topic_settings_desc" js="0">Do you want to pin or close newly created topics?</word>
+  <word key="aw_topic_message" js="0">Topic/Post Message</word>
+  <word key="aw_welcome_topic" js="0">Welcome Topic</word>
+  <word key="aw_welcome_topic_desc" js="0">Enter the name of the topic you wish new welcome posts to be added to.</word>
+  <word key="aw_topic_own" js="0">Create own topic?</word>
+  <word key="aw_topic_own_desc" js="0">Use new member registering as the topic/post author?</word>
+  <word key="view_member" js="0">View Member</word>
+  <word key="autowelcome_status_settings" js="0">Status Update</word>
+  <word key="aw_status_enable" js="0">Send status?</word>
+  <word key="aw_status_enable_desc" js="0"><![CDATA[Post to members status updates? <strong>Status updates need to be enabled for forums and member.</strong>]]></word>
+  <word key="aw_status_author" js="0">Author</word>
+  <word key="aw_status_author_desc" js="0">Enter the display name of the status update author.</word>
+  <word key="aw_status_message" js="0">Message</word>
+  <word key="aw_status_message_desc" js="0">Status update to post to new member accounts?</word>
+  <word key="aw_pm_system" js="0">System PM?</word>
+  <word key="aw_pm_system_desc" js="0">Sending as a system pm will not add to the senders pm inbox.</word>
+  <word key="autowelcome_chat_settings" js="0">Chatbox</word>
+  <word key="aw_chat_enable" js="0">Send chatbox message?</word>
+  <word key="aw_chat_enable_desc" js="0">Integrate with the Chatbox application and post when new members join?</word>
+  <word key="aw_chat_author" js="0">Author</word>
+  <word key="aw_chat_author_desc" js="0">Enter the name of the member who will post new chat messages?</word>
+  <word key="aw_chat_message" js="0">Message</word>
+  <word key="aw_chat_message_desc" js="0">Enter the contents of your chatbox message.</word>
+  <word key="aw_general_settings_tab" js="0">General</word>
+  <word key="aw_general_settings_header" js="0">General Settings</word>
+  <word key="aw_welcome_delay" js="0">Welcome time delay</word>
+  <word key="aw_welcome_delay_desc" js="0">Do you want to send welcome alerts with a time delay after a member has joined?</word>
+  <word key="aw_welcome_delay_hours" js="0">hours</word>
+  <word key="aw_welcome_delay_unlimitedLang" js="0">Send immediately after validation.</word>
+  <word key="aw_skip_validating" js="0">Skip validating</word>
+  <word key="aw_skip_validating_desc" js="0">Skip validating members from receiving welcome alerts.</word>
+  <word key="aw_welcome_groups" js="0">Welcome member groups</word>
+  <word key="aw_welcome_groups_desc" js="0">Which member groups does a member need to be part of to receive welcome alerts?</word>
+  <word key="aw_welcome_groups_unlimitedLang" js="0">All groups.</word>
+  <word key="awtag_member_name" js="0">Member Name</word>
+  <word key="awtag_member_id" js="0">Member ID</word>
+  <word key="awtag_member_link" js="0">Member Link</word>
+  <word key="awtag_board_name" js="0">Board Name</word>
+  <word key="awtag_joined_date" js="0">Joined Date</word>
+  <word key="awtag_profile_link" js="0">Profile Link</word>
+  <word key="awtag_topic_link" js="0">Topic Link</word>
+ </app>
+</language>

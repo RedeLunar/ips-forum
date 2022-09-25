@@ -1,0 +1,19 @@
+<ips:template parameters="$data" />
+<section class='ipsType_center ipsPad ipsBox'>
+    <br>
+    <i class='ipsType_huge fa fa-bars'></i>
+    <h1 class='ipsType_veryLarge'>{lang="brilliantdiscord_migrate_summary"}</h1>
+    <p class='ipsType_large'>
+        {lang="brilliantdiscord_migrate_summary_desc"}
+    </p>
+    <div class="ipsType_large brdsMigrateSummary">
+        <ul>
+            {{foreach $data as $step}}
+            <li>{lang="brilliantdiscord_migration_step_$step"}</li>
+            {{endforeach}}
+        </ul>
+    </div>
+    <p class='ipsType_large'>
+        {lang="brilliantdiscord_migrate_summary_warn"}
+    </p>
+</section>
